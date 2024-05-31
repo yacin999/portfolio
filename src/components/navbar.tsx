@@ -1,9 +1,13 @@
+"use client"
+
 import React from 'react'
-import { ModeToggle } from './mode-toggle'
+import { ModeToggle } from './providers/mode-toggle'
+import { useTranslation } from 'next-i18next'
 
 type Props = {}
 
 const Navbar = (props: Props) => {
+    const { t } = useTranslation()
   return (
     <nav className="px-20 py-5 backdrop-blur-lg">
         <div className="flex items-center justify-between">
@@ -12,10 +16,10 @@ const Navbar = (props: Props) => {
         </aside>
         <div>
             <ul className="flex items-center gap-6">
-                <li>Home</li>
-                <li>About Us</li>
-                <li>My Work</li>
-                <li>Contact Us</li>
+                <li>{t("navbar.home")}</li>
+                <li>{t("navbar.aboutUs")}</li>
+                <li>{t("navbar.myWork")}</li>
+                <li>{t("navbar.contactUs")}</li>
             </ul>
         </div>
         <aside className="flex items-center gap-6">

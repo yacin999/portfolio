@@ -1,8 +1,8 @@
 {
     "navbar" : {
         "home" : "الرئيسية",
-        "AboutUs" : "من نحن",
-        "MyWork" : "اعمالنا",
-        "ContactUs" : "تواصل معنا"
+        "aboutUs" : "من نحن",
+        "myWork" : "اعمالنا",
+        "contactUs" : "تواصل معنا"
     }
 }

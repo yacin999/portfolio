@@ -1,8 +1,8 @@
 {
     "navbar" : {
-        "home" : "home",
-        "AboutUs" : "About Us",
-        "MyWork" : "My Work",
-        "ContactUs" : "Contact Us"
+        "home" : "Home",
+        "aboutUs" : "About Us",
+        "myWork" : "My Work",
+        "contactUs" : "Contact Us"
     }
 }
