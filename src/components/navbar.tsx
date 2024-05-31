@@ -12,10 +12,10 @@ const Navbar = (props: Props) => {
         </aside>
         <div>
             <ul className="flex items-center gap-6">
-            <li>Home</li>
-            <li>About Us</li>
-            <li>My Work</li>
-            <li>Contact Us</li>
+                <li>Home</li>
+                <li>About Us</li>
+                <li>My Work</li>
+                <li>Contact Us</li>
             </ul>
         </div>
         <aside className="flex items-center gap-6">
