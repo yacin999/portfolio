@@ -6,6 +6,7 @@ import i18nConfig from "../../../i18nConfig";
 import { dir } from "i18next";
 
 const inter = Inter({ subsets: ["latin"] });
+const cairo = Cairo({subsets : ["arabic"]})
 
 export const metadata: Metadata = {
   title: "Portfolio",
