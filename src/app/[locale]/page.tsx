@@ -10,13 +10,13 @@ export default async function Home({params : {locale}} : {params : any}) {
   console.log("test locale", locale)
   const { t, resources } = await initTranslations(locale, i18nNamespaces);
   const navItems = [
-    { name : "Home",
+    { name : t("navbar.home"),
       link : "/#home"
     },
-    { name : "About Us",
+    { name : t("navbar.aboutUs"),
       link : "/#about-us"
     },
-    { name : "myWork",
+    { name : t("navbar.myWork"),
       link : "/#my-work"
     },
   ]
@@ -27,7 +27,7 @@ export default async function Home({params : {locale}} : {params : any}) {
       resouces={resources}>
       <main className="">
         <Navbar/>
-        <FloatingNav className="md:hidden" navItems={navItems}/>
+        <FloatingNav className="md:hidden" navItems={navItems} contactUsItem={t("navbar.contactUs")}/>
         <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium iusto reprehenderit quidem voluptatem doloribus pariatur ducimus assumenda. Fugiat quos consectetur perferendis quia, sunt blanditiis mollitia consequatur quibusdam. Quae, velit.</section>
         <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium iusto reprehenderit quidem voluptatem doloribus pariatur ducimus assumenda. Fugiat quos consectetur perferendis quia, sunt blanditiis mollitia consequatur quibusdam. Quae, velit.</section>
         <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium iusto reprehenderit quidem voluptatem doloribus pariatur ducimus assumenda. Fugiat quos consectetur perferendis quia, sunt blanditiis mollitia consequatur quibusdam. Quae, velit.</section>
