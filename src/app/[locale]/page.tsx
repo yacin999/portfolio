@@ -27,7 +27,7 @@ export default async function Home({params : {locale}} : {params : any}) {
       resouces={resources}>
       <main className="">
         <Navbar/>
-        <FloatingNav className="" navItems={navItems}/>
+        <FloatingNav className="md:hidden" navItems={navItems}/>
         <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium iusto reprehenderit quidem voluptatem doloribus pariatur ducimus assumenda. Fugiat quos consectetur perferendis quia, sunt blanditiis mollitia consequatur quibusdam. Quae, velit.</section>
         <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium iusto reprehenderit quidem voluptatem doloribus pariatur ducimus assumenda. Fugiat quos consectetur perferendis quia, sunt blanditiis mollitia consequatur quibusdam. Quae, velit.</section>
         <section>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea accusantium iusto reprehenderit quidem voluptatem doloribus pariatur ducimus assumenda. Fugiat quos consectetur perferendis quia, sunt blanditiis mollitia consequatur quibusdam. Quae, velit.</section>
