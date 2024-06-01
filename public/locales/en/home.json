@@ -3,6 +3,7 @@
         "home" : "Home",
         "aboutUs" : "About Us",
         "myWork" : "My Work",
-        "contactUs" : "Contact Us"
+        "contactUs" : "Contact Us",
+        "language" : "languages"
     }
 }

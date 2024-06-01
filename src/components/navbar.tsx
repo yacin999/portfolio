@@ -3,6 +3,7 @@
 import React from 'react'
 import { ModeToggle } from './providers/mode-toggle'
 import { useTranslation } from 'next-i18next'
+import LanguageChanger from './language-changer'
 
 type Props = {}
 
@@ -12,9 +13,9 @@ const Navbar = (props: Props) => {
     <nav className="px-20 py-5 backdrop-blur-lg">
         <div className="flex items-center justify-between">
         <aside>
-            <p>Kelalech</p>
+            <p>{"Ke[a[e<h"}</p>
         </aside>
-        <div>
+        <div className='hidden sm:block'>
             <ul className="flex items-center gap-6">
                 <li>{t("navbar.home")}</li>
                 <li>{t("navbar.aboutUs")}</li>
@@ -22,8 +23,8 @@ const Navbar = (props: Props) => {
                 <li>{t("navbar.contactUs")}</li>
             </ul>
         </div>
-        <aside className="flex items-center gap-6">
-            <div>En</div>
+        <aside className="flex items-center gap-8">
+            <LanguageChanger/>
             <ModeToggle/>
         </aside>
         </div>
