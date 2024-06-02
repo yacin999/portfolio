@@ -1,9 +1,9 @@
 {
     "navbar" : {
         "home" : "الرئيسية",
-        "aboutUs" : "من نحن",
-        "myWork" : "اعمالنا",
-        "contactUs" : "تواصل معنا",
+        "about" : "من نحن",
+        "projects" : "المشاريع",
+        "contact" : "تواصل",
         "language" : "اللغات"
     }
 }

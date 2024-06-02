@@ -1,9 +1,9 @@
 {
     "navbar" : {
         "home" : "Acceil",
-        "aboutUs" : "A props nous",
-        "myWork" : "Nous Travails",
-        "contactUs" : "Contactez nous",
+        "about" : "A props",
+        "projects" : "Travails",
+        "contactUs" : "Contacter",
         "language" : "langues"
     }
 }
