@@ -29,7 +29,7 @@ const Navbar = () => {
             </div>
         </aside>
         <div className='hidden md:block'>
-            <ul className="flex items-center gap-6">
+            <ul className="flex items-center gap-10">
                 <li className=' cursor-pointer'>{t("navbar.home")}</li>
                 <li className=' cursor-pointer'>{t("navbar.about")}</li>
                 <li className=' cursor-pointer'>{t("navbar.projects")}</li>

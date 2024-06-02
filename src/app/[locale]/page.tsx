@@ -2,6 +2,7 @@ import Navbar from "@/components/navbar";
 import TranslationsProvider from "@/components/providers/TranslationsProvider";
 import initTranslations from "../i18n";
 import { FloatingNav } from "@/components/ui/floating-navbar";
+import Hero from "@/components/hero";
 
 
 const i18nNamespaces = ['home'];
@@ -27,7 +28,7 @@ export default async function Home({params : {locale}} : {params : any}) {
       <main className="">
         <Navbar/>
         <FloatingNav className="md:hidden" navItems={navItems} contactUsItem={t("navbar.contactUs")}/>
-        
+        <Hero/>
       </main>
     </TranslationsProvider>
   );
