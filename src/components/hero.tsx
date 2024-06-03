@@ -13,9 +13,9 @@ const Hero = () => {
             Hire me
           </Button>
         </div>
-      </div>
-      <div>
-
+        <div>
+          second side
+        </div>
       </div>
     </section>
   )
