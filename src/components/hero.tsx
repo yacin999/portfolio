@@ -4,11 +4,11 @@ import { Button } from './ui/button'
 
 const Hero = () => {
   return (
-    <section className='w-screen'>
+    <section className=' w-full h-screen bg-hero'>
       <div className='flex flex-col sm:flex-row'>
-        <h1 className="text-4xl font-bold mb-4">Hi, I'm Kelalech Omar</h1>
-        <p className="text-xl mb-8">A passionate Web Developer specializing in modern web technologies.</p>
-        <div>
+        <div className='flex flex-col'>
+          <h1 className="text-4xl font-bold mb-4">Hi, I'm Kelalech Omar</h1>
+          <p className="text-xl mb-8">A passionate Web Developer specializing in modern web technologies.</p>
           <Button>
             Hire me
           </Button>

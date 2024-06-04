@@ -7,6 +7,8 @@ import LanguageChanger from './language-changer'
 import Image from 'next/image'
 import { cn } from '@/lib/utils'
 import { orbitron } from '@/app/fonts'
+import { navLinks } from '@/constants'
+import Link from 'next/link'
 
 
 const Navbar = () => {
@@ -14,7 +16,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className=" sticky top-0 px-10 md:px-20 py-4 backdrop-blur-lg">
+    <nav id='home' className=" fixed top-0 z-20 w-full px-10 md:px-20 py-4 backdrop-blur-lg">
         <div className="flex items-center justify-between">
         <aside>
             <div className='relative flex items-end ltr'>
@@ -30,10 +32,11 @@ const Navbar = () => {
         </aside>
         <div className='hidden md:block'>
             <ul className="flex items-center gap-10">
-                <li className=' cursor-pointer'>{t("navbar.home")}</li>
-                <li className=' cursor-pointer'>{t("navbar.about")}</li>
-                <li className=' cursor-pointer'>{t("navbar.projects")}</li>
-                <li className=' cursor-pointer'>{t("navbar.contact")}</li>
+                {navLinks.map(link=>(
+                    <li className=' cursor-pointer'>
+                        <Link href={`/#${link.id}`}>{t(`navbar.${link.title}`)}</Link>
+                    </li>
+                ))}
             </ul>
         </div>
         <aside className="flex items-center gap-8">
