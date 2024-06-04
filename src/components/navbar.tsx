@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className='hidden md:block'>
             <ul className="flex items-center gap-10">
                 {navLinks.map(link=>(
-                    <li className=' cursor-pointer'>
+                    <li className=' cursor-pointer' key={link.id}>
                         <Link href={`/#${link.id}`}>{t(`navbar.${link.title}`)}</Link>
                     </li>
                 ))}
