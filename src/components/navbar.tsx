@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { ModeToggle } from './providers/mode-toggle'
+import { ModeToggle } from './mode-toggle'
 import { useTranslation } from 'next-i18next'
 import LanguageChanger from './language-changer'
 import Image from 'next/image'

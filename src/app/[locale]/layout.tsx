@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/providers/theme-provider";
 import i18nConfig from "../../../i18nConfig";
 import { dir } from "i18next";
 import clsx from "clsx";

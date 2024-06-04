@@ -1,5 +1,5 @@
 import Navbar from "@/components/navbar";
-import TranslationsProvider from "@/components/providers/TranslationsProvider";
+import TranslationsProvider from "@/providers/TranslationsProvider";
 import initTranslations from "../i18n";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import Hero from "@/components/hero";
