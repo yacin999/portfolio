@@ -27,7 +27,7 @@ export default async function Home({params : {locale}} : {params : any}) {
       resouces={resources}>
       <main className="">
         <Navbar/>
-        <FloatingNav className="md:hidden" navItems={navItems} contactUsItem={t("navbar.contactUs")}/>
+        {/* <FloatingNav className="md:hidden" navItems={navItems} contactUsItem={t("navbar.contactUs")}/> */}
         <Hero/>
       </main>
     </TranslationsProvider>
