@@ -4,7 +4,7 @@ type Props = {}
 
 const CanvasLoader = (props: Props) => {
   return (
-    <div>CanvasLoader</div>
+    <>CanvasLoader</>
   )
 }
 

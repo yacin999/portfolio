@@ -2,10 +2,10 @@
 
 import React , { Suspense , useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
-import { useGLTF, Preload, OrbitControls } from "@react-three/drei"
+import { useGLTF, Preload, OrbitControls } from "@react-three/drei" 
+
 import CanvasLoader from "./canvas-loader"
 
-// import { extend } from '@react-three/fiber'
 
 
 type Props = {}
@@ -33,9 +33,9 @@ const ComputerCanvas = ()=> {
         >
             <Suspense fallback={<CanvasLoader/>}>
                 <OrbitControls 
-                    // enableZoom={false}
-                    // maxPolarAngle={Math.PI / 2}
-                    // minPolarAngle={Math.PI / 2}
+                    enableZoom={false}
+                    maxPolarAngle={Math.PI / 2}
+                    minPolarAngle={Math.PI / 2}
                 />
                 <Computer/>
             </Suspense>
