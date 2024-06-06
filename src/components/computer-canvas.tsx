@@ -5,6 +5,7 @@ import { Canvas } from '@react-three/fiber'
 import { useGLTF, Preload, OrbitControls } from "@react-three/drei" 
 
 import CanvasLoader from "./canvas-loader"
+import { mediaScreenSizes } from '@/constants'
 
 
 
@@ -28,29 +29,42 @@ const Computer = ({isMobile}: Props) => {
         />
         <primitive
             object={computer.scene}
-            scale={isMobile ? 0.50 : 0.75}
-            position={[1, -4.25, -0.8]}
+            scale={isMobile ? 0.65 : 1}
+            position={[1, -2.25, -0]}
             rotation={[-0.0, -0.3, -0.2]}
         />
     </mesh>
   )
 }
 
+
+type screenSizes = "mobile" | "sm" | "md" | "lg" | "xl" | "2xl"
+
 const ComputerCanvas = ()=> {
-    const [isMobile, setIsMobile] = useState(false)
-
+    // const [isMobile, setIsMobile] = useState(false)
+    const [screenSize, setScreenSize] = useState<screenSizes | string >("")
     useEffect(()=> {
-        const mediaQuery = window.matchMedia("(max-width : 500px)")
-        setIsMobile(mediaQuery.matches)
+        // const mediaQuery = window.matchMedia("(max-width : 500px)")
+        // setIsMobile(mediaQuery.matches)
 
-        const handleIsMobileMediaQuery = (event : any) => {
-            setIsMobile(mediaQuery.matches)
+        const handleIsMobileMediaQuery = (event : MediaQueryListEvent, size : string, mediaQuery : any) => {
+            // setIsMobile(mediaQuery.matches)
+            Object.entries(mediaScreenSizes).forEach(([key, value]) => {
+                if (value.matches) {
+                    setScreenSize(key)
+                }
+            })
         }
 
-        mediaQuery.addEventListener("change", handleIsMobileMediaQuery)
+
+        Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
+            mediaQuery.addEventListener("change", handleIsMobileMediaQuery(e, size, mediaQuery))
+        })
+
+        // mediaQuery.addEventListener("change", handleIsMobileMediaQuery)
 
         return () => {
-            mediaQuery.removeEventListener("change", handleIsMobileMediaQuery)
+            // mediaQuery.removeEventListener("change", handleIsMobileMediaQuery)
         }
     })
 
