@@ -5,16 +5,28 @@ import { Canvas } from '@react-three/fiber'
 import { useGLTF, Preload, OrbitControls } from "@react-three/drei" 
 
 import CanvasLoader from "./canvas-loader"
-import { mediaScreenSizes } from '@/constants'
+// import { mediaScreenSizes } from '@/constants'
 
 
 
 type Props = {
-    isMobile : boolean
+    isMobile : boolean,
+    screenSize : any
 }
 
-const Computer = ({isMobile}: Props) => {
+
+const mediaScreenSizes = {
+    "mobile" : window.matchMedia("(max-width : 500px)"), 
+    "sm" : window.matchMedia("(max-width : 768px)"),  
+    "md" : window.matchMedia("(max-width : 1024px"),  
+    "lg" : window.matchMedia("(max-width : 1280px)"),  
+    "xl" : window.matchMedia("(max-width : 1536px)"),  
+    "2xl" : window.matchMedia("(min-width : 1537px)"),  
+  }
+
+const Computer = ({isMobile, screenSize}: Props) => {
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
+    console.log("test screen size :", screenSize)
   return (
     <mesh>
         <hemisphereLight intensity={4} /> 
@@ -47,24 +59,25 @@ const ComputerCanvas = ()=> {
         // const mediaQuery = window.matchMedia("(max-width : 500px)")
         // setIsMobile(mediaQuery.matches)
 
-        const handleIsMobileMediaQuery = (event : MediaQueryListEvent, size : string, mediaQuery : any) => {
+        const handleIsMobileMediaQuery:any = (size : string, mediaQuery : any) => {
             // setIsMobile(mediaQuery.matches)
-            Object.entries(mediaScreenSizes).forEach(([key, value]) => {
-                if (value.matches) {
-                    setScreenSize(key)
+                if (mediaQuery.matches) {
+                    setScreenSize(size)
                 }
-            })
         }
 
 
         Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
-            mediaQuery.addEventListener("change", handleIsMobileMediaQuery(e, size, mediaQuery))
+            mediaQuery.addEventListener("change", handleIsMobileMediaQuery(size, mediaQuery))
         })
 
         // mediaQuery.addEventListener("change", handleIsMobileMediaQuery)
 
         return () => {
             // mediaQuery.removeEventListener("change", handleIsMobileMediaQuery)
+            Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
+                mediaQuery.removeEventListener("change", handleIsMobileMediaQuery(size, mediaQuery))
+            })
         }
     })
 
@@ -82,7 +95,7 @@ const ComputerCanvas = ()=> {
                     maxPolarAngle={Math.PI / 2}
                     minPolarAngle={Math.PI / 2}
                 />
-                <Computer isMobile={isMobile}/>
+                <Computer isMobile={false} screenSize={screenSize}/>
             </Suspense>
             <Preload all/>
         </Canvas>
