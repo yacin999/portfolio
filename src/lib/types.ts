@@ -13,3 +13,7 @@
 //     }
 //   }
 
+
+
+
+type screenSizes = "mobile" | "sm" | "md" | "lg" | "xl" | "2xl"

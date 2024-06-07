@@ -15,18 +15,11 @@ type Props = {
 }
 
 
-const mediaScreenSizes = {
-    "mobile" : window.matchMedia("(max-width : 500px)"), 
-    "sm" : window.matchMedia("(max-width : 768px)"),  
-    "md" : window.matchMedia("(max-width : 1024px"),  
-    "lg" : window.matchMedia("(max-width : 1280px)"),  
-    "xl" : window.matchMedia("(max-width : 1536px)"),  
-    "2xl" : window.matchMedia("(min-width : 1537px)"),  
-  }
+
 
 const Computer = ({isMobile, screenSize}: Props) => {
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
-    console.log("test screen size :", screenSize)
+    // console.log("test screen size :", screenSize)
   return (
     <mesh>
         <hemisphereLight intensity={4} /> 
@@ -50,36 +43,43 @@ const Computer = ({isMobile, screenSize}: Props) => {
 }
 
 
-type screenSizes = "mobile" | "sm" | "md" | "lg" | "xl" | "2xl"
+
 
 const ComputerCanvas = ()=> {
     // const [isMobile, setIsMobile] = useState(false)
-    const [screenSize, setScreenSize] = useState<screenSizes | string >("")
+    const [screenSize, setScreenSize] = useState<string>("")
     useEffect(()=> {
         // const mediaQuery = window.matchMedia("(max-width : 500px)")
         // setIsMobile(mediaQuery.matches)
+        console.log("use effect is running :", screenSize)
+        
+        const mediaScreenSizes : {[key : string] : MediaQueryList } = {
+            "mobile" : window.matchMedia("(max-width : 500px)"), 
+            "sm" : window.matchMedia("(min-width : 640px) and (max-width : 768px)"),  
+            "md" : window.matchMedia("(min-width : 768px) and (max-width : 1024px"),  
+            "lg" : window.matchMedia("(min-width : 1024px) and (max-width : 1280px)"),  
+            "xl" : window.matchMedia("(min-width : 1280px) and (max-width : 1536px)"),  
+            "2xl" : window.matchMedia("(min-width : 1536px)"),  
+        }
 
-        const handleIsMobileMediaQuery:any = (size : string, mediaQuery : any) => {
-            // setIsMobile(mediaQuery.matches)
-                if (mediaQuery.matches) {
+        function handleIsMobileMediaQuery  ( size : string, mediaQuery : MediaQueryList) {
+                if ( mediaQuery.matches) {
                     setScreenSize(size)
                 }
         }
 
 
         Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
-            mediaQuery.addEventListener("change", handleIsMobileMediaQuery(size, mediaQuery))
+            mediaQuery.addEventListener("change", (event) => handleIsMobileMediaQuery(size, mediaQuery))
         })
 
-        // mediaQuery.addEventListener("change", handleIsMobileMediaQuery)
 
         return () => {
-            // mediaQuery.removeEventListener("change", handleIsMobileMediaQuery)
             Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
-                mediaQuery.removeEventListener("change", handleIsMobileMediaQuery(size, mediaQuery))
+                mediaQuery.removeEventListener("change",(event) => handleIsMobileMediaQuery(size, mediaQuery))
             })
         }
-    })
+    }, [screenSize])
 
     return (
         <Canvas
