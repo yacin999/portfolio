@@ -26,12 +26,30 @@ export const navLinks = [
 //   "2xl" : window.matchMedia("(min-width : 1537px)"),  
 // }
 
-export const computerCanvasPositions = {
-  "mobile" : [], 
-  "sm" : [],  
-  "md" : [], 
-  "lg" : [],  
-  "xl" : [1, -2.25, -1.5],  
-  "2xl" : [],  
+export const computerCanvasPositions : {[key : string] : any} = {
+  "mobile" : {
+    scale : 0.75,
+    position : [1, -2.25, -1.5]
+  },   
+  "sm" : {
+    scale : 0.75,
+    position : [1, -2.25, -1.5]
+  },      
+  "md" : {
+    scale : 0.75,
+    position : [1, -2.25, -1.5]
+  },   
+  "lg" : {
+    scale : 0.8,
+    position : [1, -2.25, -1.5]
+  },   
+  "xl" : {
+    scale : 0.9,
+    position : [1, -2.25, -1.5]
+  },    
+  "2xl" : {
+    scale : 1,
+    position : [1, -2.25, -1.5]
+  },  
 }
   

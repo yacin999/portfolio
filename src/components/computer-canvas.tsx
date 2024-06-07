@@ -5,21 +5,21 @@ import { Canvas } from '@react-three/fiber'
 import { useGLTF, Preload, OrbitControls } from "@react-three/drei" 
 
 import CanvasLoader from "./canvas-loader"
-// import { mediaScreenSizes } from '@/constants'
+import { computerCanvasPositions } from '@/constants'
 
 
 
 type Props = {
-    isMobile : boolean,
-    screenSize : any
+    screenSize : string
 }
 
 
 
 
-const Computer = ({isMobile, screenSize}: Props) => {
+const Computer = ({screenSize}: Props) => {
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
     console.log("test screen size :", screenSize)
+    console.log("test computerCanvasPositions[screenSize].scale :", computerCanvasPositions[screenSize])
   return (
     <mesh>
         <hemisphereLight intensity={4} /> 
@@ -34,7 +34,7 @@ const Computer = ({isMobile, screenSize}: Props) => {
         />
         <primitive
             object={computer.scene}
-            scale={isMobile ? 0.65 : 1}
+            scale={computerCanvasPositions[screenSize]?.scale}
             position={[1, -2.25, -1.5]}
             rotation={[-0.0, -0.3, -0.2]}
         />
@@ -69,11 +69,18 @@ const ComputerCanvas = ()=> {
         }
 
 
+        // set screenSize state when the component mounts
+        Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
+            handleIsMobileMediaQuery(size, mediaQuery)
+        })
+
+
+        // set screenSize state when the media query changes 
         Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
             mediaQuery.addEventListener("change", (event) => handleIsMobileMediaQuery(size, mediaQuery))
         })
 
-
+        // remove the event listener from media query when the component unmount
         return () => {
             Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
                 mediaQuery.removeEventListener("change",(event) => handleIsMobileMediaQuery(size, mediaQuery))
@@ -95,7 +102,7 @@ const ComputerCanvas = ()=> {
                     maxPolarAngle={Math.PI / 2}
                     minPolarAngle={Math.PI / 2}
                 />
-                <Computer isMobile={false} screenSize={screenSize}/>
+                <Computer screenSize={screenSize}/>
             </Suspense>
             <Preload all/>
         </Canvas>
