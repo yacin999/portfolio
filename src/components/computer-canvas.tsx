@@ -19,7 +19,7 @@ type Props = {
 
 const Computer = ({isMobile, screenSize}: Props) => {
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
-    // console.log("test screen size :", screenSize)
+    console.log("test screen size :", screenSize)
   return (
     <mesh>
         <hemisphereLight intensity={4} /> 
@@ -35,7 +35,7 @@ const Computer = ({isMobile, screenSize}: Props) => {
         <primitive
             object={computer.scene}
             scale={isMobile ? 0.65 : 1}
-            position={[1, -2.25, -0]}
+            position={[1, -2.25, -1.5]}
             rotation={[-0.0, -0.3, -0.2]}
         />
     </mesh>
@@ -51,7 +51,7 @@ const ComputerCanvas = ()=> {
     useEffect(()=> {
         // const mediaQuery = window.matchMedia("(max-width : 500px)")
         // setIsMobile(mediaQuery.matches)
-        console.log("use effect is running :", screenSize)
+        // console.log("use effect is running :", screenSize)
         
         const mediaScreenSizes : {[key : string] : MediaQueryList } = {
             "mobile" : window.matchMedia("(max-width : 500px)"), 

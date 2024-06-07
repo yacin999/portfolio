@@ -31,7 +31,7 @@ export const computerCanvasPositions = {
   "sm" : [],  
   "md" : [], 
   "lg" : [],  
-  "xl" : [],  
+  "xl" : [1, -2.25, -1.5],  
   "2xl" : [],  
 }
   
