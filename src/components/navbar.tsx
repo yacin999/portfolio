@@ -19,7 +19,7 @@ const Navbar = () => {
     <nav id='home' className=" fixed top-0 z-20 w-full px-10 md:px-20 py-4 backdrop-blur-lg h-[70px]">
         <div className="flex items-center justify-between">
         <aside>
-            <div className='relative flex items-end ltr'>
+            <div className='relative flex items-end ltr cursor-pointer'>
                 <Image
                     src={"/assets/portfolio-logo.svg"}
                     width={30}
@@ -33,8 +33,8 @@ const Navbar = () => {
         <div className='hidden md:block'>
             <ul className="flex items-center gap-10">
                 {navLinks.map(link=>(
-                    <li className=' cursor-pointer' key={link.id}>
-                        <Link href={`/#${link.id}`}>{t(`navbar.${link.title}`)}</Link>
+                    <li className='cursor-pointer' key={link.id}>
+                        <Link href={`/#${link.id}`} className='dark:hover:text-slate-300'>{t(`navbar.${link.title}`)}</Link>
                     </li>
                 ))}
             </ul>

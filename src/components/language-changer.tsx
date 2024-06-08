@@ -42,9 +42,9 @@ const LanguageChanger = () => {
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
         <div className='relative cursor-pointer'>
-                <Languages size={18}/>
-                <ChevronDown className='absolute top-0 -right-4' size={15}/>
-            </div>
+            <Languages size={18}/>
+            <ChevronDown className='absolute top-0 -right-4' size={15}/>
+        </div>
         </DropdownMenuTrigger>
         <DropdownMenuContent className='min-w-20'>
             <DropdownMenuRadioGroup value={currentLocale} onValueChange={handleChange}>

@@ -8,14 +8,16 @@ import CanvasLoader from "./canvas-loader"
 import { computerCanvasPositions } from '@/constants'
 
 
-
+let counter = 0
 
 const Computer = ({screenSize}: {
     screenSize : string
 }) => {
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
-    console.log("test screen size :", screenSize)
-    console.log("test computerCanvasPositions[screenSize].scale :", computerCanvasPositions[screenSize])
+    // console.log("test screen size :", screenSize)
+    console.log("test computerCanvasPositions :", screenSize, computerCanvasPositions[screenSize].scale, computerCanvasPositions[screenSize].position)
+    // console.log("test computerCanvasPositions[screenSize] :", computerCanvasPositions[screenSize])
+    // console.log("COMPUTER component mounted !!!", counter++)
   return (
     <mesh>
         <hemisphereLight intensity={4} /> 
@@ -30,8 +32,8 @@ const Computer = ({screenSize}: {
         />
         <primitive
             object={computer.scene}
-            scale={computerCanvasPositions[screenSize]?.scale}
-            position={[1, -2.25, -1.5]}
+            scale={computerCanvasPositions[screenSize].scale}
+            position={computerCanvasPositions[screenSize].position}
             rotation={[-0.0, -0.3, -0.2]}
         />
     </mesh>
@@ -47,7 +49,8 @@ const ComputerCanvas = ()=> {
 
     useEffect(()=> {
         const mediaScreenSizes : {[key : string] : MediaQueryList } = {
-            "mobile" : window.matchMedia("(max-width : 500px)"), 
+            "mobile" : window.matchMedia("(max-width : 450px)"), 
+            "xs" : window.matchMedia("(min-width : 450px) and (max-width : 640px)"),
             "sm" : window.matchMedia("(min-width : 640px) and (max-width : 768px)"),  
             "md" : window.matchMedia("(min-width : 768px) and (max-width : 1024px"),  
             "lg" : window.matchMedia("(min-width : 1024px) and (max-width : 1280px)"),  
@@ -55,10 +58,10 @@ const ComputerCanvas = ()=> {
             "2xl" : window.matchMedia("(min-width : 1536px)"),  
         }
 
-        function handleIsMobileMediaQuery  ( size : string, mediaQuery : MediaQueryList) {
-                if ( mediaQuery.matches) {
-                    setScreenSize(size)
-                }
+        function handleIsMobileMediaQuery  (size : string, mediaQuery : MediaQueryList) {
+            if ( mediaQuery.matches) {
+                setScreenSize(size)
+            }
         }
 
 
@@ -66,8 +69,9 @@ const ComputerCanvas = ()=> {
         Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
             handleIsMobileMediaQuery(size, mediaQuery)
         })
+        
 
-
+        
         // set screenSize state when the media query changes 
         Object.entries(mediaScreenSizes).forEach(([size, mediaQuery]) => {
             mediaQuery.addEventListener("change", (event) => handleIsMobileMediaQuery(size, mediaQuery))
@@ -87,7 +91,7 @@ const ComputerCanvas = ()=> {
             shadows
             camera={{position : [20, 5, 7], fov : 30}}
             gl={{preserveDrawingBuffer : true}}
-            // className='w-full'
+            className='max-w-full max-h-full'
         >
             <Suspense fallback={<CanvasLoader/>}>
                 <OrbitControls 
