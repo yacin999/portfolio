@@ -5,5 +5,14 @@
         "projects" : "المشاريع",
         "contact" : "تواصل",
         "language" : "اللغات"
+    },
+    "hero" : {
+        "greeting" : "مرحبا !",
+        "heading" : "أنا",
+        "lastName" : "قلالش",
+        "firstName" : "عمر",
+        "details" : ".مطور ويب شغوف متخصص في تقنيات الويب الحديثة",
+        "hireBtn" : "وظفني",
+        "workBtn" : "اعمالي"
     }
 }

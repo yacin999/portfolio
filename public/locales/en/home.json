@@ -5,5 +5,14 @@
         "projects" : "Projects",
         "contact" : "Contact",
         "language" : "languages"
+    },
+    "hero" : {
+        "greeting" : "hello!",
+        "heading" : "I am",
+        "lastName" : "Kelalech",
+        "firstName" : "Omar",
+        "details" : "A passionate Web Developer specializing in modern web technologies.",
+        "hireBtn" : "Hire me",
+        "workBtn" : "My Work"
     }
 }
