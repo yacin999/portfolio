@@ -41,7 +41,7 @@ const LanguageChanger = () => {
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
-        <div className='relative cursor-pointer'>
+        <div className='relative cursor-pointer dark:hover:text-slate-300'>
             <Languages size={18}/>
             <ChevronDown className='absolute top-0 -right-4' size={15}/>
         </div>

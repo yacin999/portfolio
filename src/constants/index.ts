@@ -17,15 +17,6 @@ export const navLinks = [
       },
 ];
 
-// export const mediaScreenSizes = {
-//   "mobile" : window.matchMedia("(max-width : 500px)"), 
-//   "sm" : window.matchMedia("(max-width : 768px)"),  
-//   "md" : window.matchMedia("(max-width : 1024px"),  
-//   "lg" : window.matchMedia("(max-width : 1280px)"),  
-//   "xl" : window.matchMedia("(max-width : 1536px)"),  
-//   "2xl" : window.matchMedia("(min-width : 1537px)"),  
-// }
-
 export const computerCanvasPositions : {[key : string] : any} = {
   "mobile" : {
     scale : 0.75,
