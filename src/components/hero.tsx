@@ -9,7 +9,7 @@ const Hero = () => {
     <section className=' w-full h-[calc(100vh-70px)] bg-hero bg-cover flex items-center mt-[70px]'>
       <div className='w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
 
-        <div className='flex-1 grow-[2] flex w-full flex-col items-start justify-start  pl-10 '>
+        <div className='lg:flex-1 lg:grow-[2] flex w-full flex-col items-start justify-start  pl-10 '>
           <h1 className="flex items-center gap-2 text-4xl font-bold mb-4 lg:text-2xl">
             Hi, I'm 
             <p className='text-[#00CC00]'>Kelalech Omar</p>
@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <div className='flex-1 grow-[3] shrink-0 basis-1 h-full'>
+        <div className='lg:flex-1 lg:grow-[3] shrink-0 basis-1 h-full'>
           <ComputerCanvas/>
         </div>
       </div>

@@ -32,11 +32,11 @@ export const computerCanvasPositions : {[key : string] : any} = {
     position : [1, -2.25, -1.5]
   },   
   "sm" : {
-    scale : 0.75,
+    scale : 0.9,
     position : [1, -2.25, -1.5]
   },      
   "md" : {
-    scale : 0.75,
+    scale : 0.9,
     position : [1, -2.25, -1.5]
   },   
   "lg" : {

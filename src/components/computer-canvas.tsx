@@ -9,14 +9,10 @@ import { computerCanvasPositions } from '@/constants'
 
 
 
-type Props = {
+
+const Computer = ({screenSize}: {
     screenSize : string
-}
-
-
-
-
-const Computer = ({screenSize}: Props) => {
+}) => {
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
     console.log("test screen size :", screenSize)
     console.log("test computerCanvasPositions[screenSize].scale :", computerCanvasPositions[screenSize])
@@ -46,13 +42,10 @@ const Computer = ({screenSize}: Props) => {
 
 
 const ComputerCanvas = ()=> {
-    // const [isMobile, setIsMobile] = useState(false)
     const [screenSize, setScreenSize] = useState<string>("")
+
+
     useEffect(()=> {
-        // const mediaQuery = window.matchMedia("(max-width : 500px)")
-        // setIsMobile(mediaQuery.matches)
-        // console.log("use effect is running :", screenSize)
-        
         const mediaScreenSizes : {[key : string] : MediaQueryList } = {
             "mobile" : window.matchMedia("(max-width : 500px)"), 
             "sm" : window.matchMedia("(min-width : 640px) and (max-width : 768px)"),  
@@ -94,7 +87,7 @@ const ComputerCanvas = ()=> {
             shadows
             camera={{position : [20, 5, 7], fov : 30}}
             gl={{preserveDrawingBuffer : true}}
-            className='w-full'
+            // className='w-full'
         >
             <Suspense fallback={<CanvasLoader/>}>
                 <OrbitControls 
