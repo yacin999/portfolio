@@ -14,10 +14,7 @@ const Computer = ({screenSize}: {
     screenSize : string
 }) => {
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
-    // console.log("test screen size :", screenSize)
     console.log("test computerCanvasPositions :", screenSize, computerCanvasPositions[screenSize].scale, computerCanvasPositions[screenSize].position)
-    // console.log("test computerCanvasPositions[screenSize] :", computerCanvasPositions[screenSize])
-    // console.log("COMPUTER component mounted !!!", counter++)
   return (
     <mesh>
         <hemisphereLight intensity={4} /> 

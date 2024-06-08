@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from './ui/button'
 import ComputerCanvas from './computer-canvas'
 import Link from 'next/link'
 import { cn } from '@/lib/utils'
