@@ -16,7 +16,7 @@ const Navbar = () => {
 
 
   return (
-    <nav id='home' className=" fixed top-0 z-20 w-full px-10 md:px-20 py-4 backdrop-blur-lg h-[70px]">
+    <nav id='home' className=" fixed top-0 z-20 w-full px-10 md:px-20 py-4 backdrop-blur-lg h-[70px] border-b">
         <div className="flex items-center justify-between">
         <aside>
             <div className='relative flex items-end ltr cursor-pointer'>
