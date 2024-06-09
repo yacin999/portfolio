@@ -3,9 +3,8 @@
 import React from 'react'
 import ComputerCanvas from './computer-canvas'
 import Link from 'next/link'
-import { cn } from '@/lib/utils'
 import { orbitron } from '@/app/fonts'
-import { i18n, useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { useParams } from 'next/navigation'
 import clsx from 'clsx'
 
@@ -13,16 +12,17 @@ import clsx from 'clsx'
 const Hero = () => {
   const { t } = useTranslation()
   const { locale } = useParams()
-
   return (
     <section className=' w-full h-[calc(100vh-70px)] bg-hero bg-cover flex items-center mt-[70px]'>
       <div className='w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
 
         <div className={clsx("lg:flex-1 lg:grow-[2] w-full m-auto", {
-          "pl-10" : locale === "fr" || locale || "en", 
+          "pl-10" : locale === "fr" || locale === "en", 
           "pr-10" : locale === "ar",
         })}>
-            <p className={cn(orbitron.className, 'w-full flex items-center gap-2 uppercase mb-4 dark:text-slate-200 text-sm lg:text-md tracking-widest')}>
+            <p className={clsx("w-full flex items-center gap-2 uppercase mb-4 dark:text-slate-200 text-sm lg:text-md tracking-widest", {
+              [orbitron.className] : locale === "fr" || locale === "en",
+            })}>
               {t("hero.greeting")}
             </p>
           <h1 className="flex items-center flex-wrap gap-2 text-4xl font-bold mb-6 lg:text-5xl">
