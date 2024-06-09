@@ -8,13 +8,14 @@ import CanvasLoader from "./canvas-loader"
 import { computerCanvasPositions } from '@/constants'
 
 
-let counter = 0
 
-const Computer = ({screenSize}: {
-    screenSize : string
+const Computer = ({screenSize, locale}: {
+    screenSize : string,
+    locale : string | string[]
 }) => {
+
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
-    console.log("test computerCanvasPositions :", screenSize, computerCanvasPositions[screenSize].scale, computerCanvasPositions[screenSize].position)
+
   return (
     <mesh>
         <hemisphereLight intensity={4} /> 
@@ -30,7 +31,9 @@ const Computer = ({screenSize}: {
         <primitive
             object={computer.scene}
             scale={computerCanvasPositions[screenSize].scale}
-            position={computerCanvasPositions[screenSize].position}
+            position={
+                locale === "ar" ? computerCanvasPositions[screenSize].position.rtl : computerCanvasPositions[screenSize].position.ltr
+            }
             rotation={[-0.0, -0.3, -0.2]}
         />
     </mesh>
@@ -40,7 +43,7 @@ const Computer = ({screenSize}: {
 
 
 
-const ComputerCanvas = ()=> {
+const ComputerCanvas = ({locale} : {locale : string | string[]})=> {
     const [screenSize, setScreenSize] = useState<string>("")
 
 
@@ -51,8 +54,7 @@ const ComputerCanvas = ()=> {
             "sm" : window.matchMedia("(min-width : 640px) and (max-width : 768px)"),  
             "md" : window.matchMedia("(min-width : 768px) and (max-width : 1024px"),  
             "lg" : window.matchMedia("(min-width : 1024px) and (max-width : 1280px)"),  
-            "xl" : window.matchMedia("(min-width : 1280px) and (max-width : 1536px)"),  
-            "2xl" : window.matchMedia("(min-width : 1536px)"),  
+            "xl" : window.matchMedia("(min-width : 1280px)"),  
         }
 
         function handleIsMobileMediaQuery  (size : string, mediaQuery : MediaQueryList) {
@@ -96,7 +98,7 @@ const ComputerCanvas = ()=> {
                     maxPolarAngle={Math.PI / 2}
                     minPolarAngle={Math.PI / 2}
                 />
-                <Computer screenSize={screenSize}/>
+                <Computer screenSize={screenSize} locale={locale}/>
             </Suspense>
             <Preload all/>
         </Canvas>

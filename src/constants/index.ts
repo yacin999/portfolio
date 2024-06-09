@@ -19,32 +19,52 @@ export const navLinks = [
 
 export const computerCanvasPositions : {[key : string] : any} = {
   "mobile" : {
-    scale : 0.75,
-    position : [1, -2.25, -1.5]
+    scale : 0.8,
+    // position : [1, -2.25, -1.5],
+    position : {
+      "ltr" : [1, -2.25, -0.5],
+      "rtl" : [1, -2.25, -0.5]
+    }
   },   
   "xs" : {
     scale : 1.2,
-    position : [3, -1.5, -0.5]
+    // position : [3, -1.5, -0.5]
+    position : {
+      "ltr" : [3, -1.5, -0.5],
+      "rtl" : [3, -1.5, -0.5]
+    }
   }, 
   "sm" : {
     scale : 1.3,
-    position : [3, -2.25, -0.5]
+    // position : [3, -2.25, -0.5]
+    position : {
+      "ltr" : [3, -2.25, -0.5],
+      "rtl" : [3, -2.25, -0.5]
+    }
   },      
   "md" : {
     scale : 1.2,
-    position : [1, -2.25, -1.5]
+    // position : [1, -2.25, -1.5]
+    position : {
+      "ltr" : [1, -2.25, -1.5],
+      "rtl" : [1, -2.25, -1.5]
+    }
   },   
   "lg" : {
     scale : 1,
-    position : [1, -2.25, -1.5]
+    position : {
+      "ltr" : [1, -2.25, -1.5],
+      "rtl" : [1, -2.25, -0.5]
+    }
+    // position : [1, -2.25, -0.5]
   },   
   "xl" : {
     scale : 1.1,
-    position : [1, -2.25, -2]
+    position : {
+      "ltr" : [1, -2.25, -2],
+      "rtl" : [1, -2.25, -0.5]
+    }
+    // position : [1, -2.25, -0.5]
   },    
-  "2xl" : {
-    scale : 1,
-    position : [1, -2.25, -1.5]
-  },  
 }
   

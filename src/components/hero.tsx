@@ -25,20 +25,22 @@ const Hero = () => {
             })}>
               {t("hero.greeting")}
             </p>
-          <h1 className="flex items-center flex-wrap gap-2 text-4xl font-bold mb-6 lg:text-5xl">
+          <h1 className={clsx("flex items-center flex-wrap gap-2 text-4xl font-bold mb-6 lg:text-5xl", {
+            "lg:text-6xl mt-8" : locale === "ar"
+          })}>
             {t("hero.heading")}
             <p className='text-[#00CC00]'>{t("hero.lastName")}</p>
             <p className='text-[#00CC00]'>{t("hero.firstName")}</p>
           </h1>
           <p className="text-md md:max-lg:text-lg mb-8 dark:text-slate-300">{t("hero.details")}</p>
-          <div className='hidden md:flex items-center gap-6'>
+          <div className=' flex items-center gap-6'>
             <Link href={"/#work"} className='px-4 py-2 rounded-sm bg-[#00CC00] shadow-[0_2px_10px_1px_#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'> {t("hero.hireBtn")}</Link>
             <Link href={"/#work"} className='px-4 py-2 rounded-sm border-2 border-[#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'>{t("hero.workBtn")}</Link>
           </div>
         </div>
 
-        <div className='lg:flex-1 lg:grow-[3] h-[60%] lg:max-w-[60%] lg:h-full'>
-          <ComputerCanvas/>
+        <div className='lg:flex-1 lg:grow-[3] h-[55%] lg:max-w-[60%] lg:h-full'>
+          <ComputerCanvas locale={locale}/>
         </div>
       </div>
     </section>

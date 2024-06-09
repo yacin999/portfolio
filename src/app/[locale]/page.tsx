@@ -3,6 +3,7 @@ import TranslationsProvider from "@/providers/TranslationsProvider";
 import initTranslations from "../i18n";
 import { FloatingNav } from "@/components/ui/floating-navbar";
 import Hero from "@/components/hero";
+import About from "@/components/about";
 
 
 const i18nNamespaces = ['home'];
@@ -13,10 +14,10 @@ export default async function Home({params : {locale}} : {params : any}) {
     { name : t("navbar.home"),
       link : "/#home"
     },
-    { name : t("navbar.aboutUs"),
+    { name : t("navbar.about"),
       link : "/#about-us"
     },
-    { name : t("navbar.myWork"),
+    { name : t("navbar.projects"),
       link : "/#my-work"
     },
   ]
@@ -27,8 +28,9 @@ export default async function Home({params : {locale}} : {params : any}) {
       resouces={resources}>
       <main className="">
         <Navbar/>
-        {/* <FloatingNav className="md:hidden" navItems={navItems} contactUsItem={t("navbar.contactUs")}/> */}
+        <FloatingNav className="md:hidden" navItems={navItems} contactUsItem={t("navbar.contact")}/>
         <Hero/>
+        <About/>
       </main>
     </TranslationsProvider>
   );
