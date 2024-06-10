@@ -110,6 +110,10 @@ export const skillsIcons = [
     icon : "/assets/skills/bootstrap.svg"
   },
   {
+    name: "nodejs",
+    icon : "/assets/skills/nodejs.svg"
+  },
+  {
     name: "python",
     icon : "/assets/skills/python.svg"
   },
@@ -124,10 +128,6 @@ export const skillsIcons = [
   {
     name: "prisma",
     icon : "/assets/skills/prisma.svg"
-  },
-  {
-    name: "nodejs",
-    icon : "/assets/skills/nodejs.svg"
   }
 ]
   

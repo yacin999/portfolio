@@ -92,7 +92,7 @@ const About = (props: Props) => {
                 width={50}
                 height={50}
                 alt={skill.name}
-                className=' rounded-full border border-border'
+                className=' rounded-full border-2 border-border bg-background'
               />
             ))}
           </div>
