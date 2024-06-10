@@ -1,3 +1,7 @@
+
+
+
+
 export const navLinks = [
     {
       id: "home",
@@ -67,4 +71,63 @@ export const computerCanvasPositions : {[key : string] : any} = {
     // position : [1, -2.25, -0.5]
   },    
 }
+
+export const skillsIcons = [
+  {
+    name: "javascript",
+    icon : "/assets/skills/javascript.svg"
+  },
+  {
+    name: "css",
+    icon : "/assets/skills/css.svg"
+  },
+  {
+    name: "html",
+    icon : "/assets/skills/html.svg"
+  },
+  {
+    name: "typescript",
+    icon : "/assets/skills/typescript.svg"
+  },
+  {
+    name: "reactjs",
+    icon : "/assets/skills/reactjs.svg"
+  },
+  {
+    name: "redux",
+    icon : "/assets/skills/redux.svg"
+  },
+  {
+    name: "nextjs",
+    icon : "/assets/skills/nextjs.svg"
+  },
+  {
+    name: "tailwindcss",
+    icon : "/assets/skills/tailwindcss.svg"
+  },
+  {
+    name: "bootstrap",
+    icon : "/assets/skills/bootstrap.svg"
+  },
+  {
+    name: "python",
+    icon : "/assets/skills/python.svg"
+  },
+  {
+    name: "django",
+    icon : "/assets/skills/django.svg"
+  },
+  {
+    name: "mysql",
+    icon : "/assets/skills/mysql.svg"
+  },
+  {
+    name: "prisma",
+    icon : "/assets/skills/prisma.svg"
+  },
+  {
+    name: "nodejs",
+    icon : "/assets/skills/nodejs.svg"
+  }
+]
   
