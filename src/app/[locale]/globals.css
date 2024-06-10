@@ -39,7 +39,7 @@
       /* --background: 240 10% 3.9%;
       --foreground: 0 0% 98%; */
 
-      --background: #191A19;
+      --background: 120, 2%, 10%;
       --foreground: 210 40% 98%;
 
       --card: 240 10% 3.9%;
@@ -73,7 +73,7 @@
     * {
       @apply border-border;
     }
-    html, body {
+    body {
       @apply bg-background text-foreground;
     }
   }
