@@ -11,11 +11,11 @@ const About = (props: Props) => {
   return (
     <section className='flex flex-col items-center mt-10 p-20 relative w-full bg-hero bg-[#191A19] mb-10'>
 
-          {/* start square gradiant grid background */}
+          {/* - start square gradiant grid background */}
           <div className="absolute z-10 bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
           </div>
           <div className='absolute z-20 bottom-0 left-0 right-0 top-0 w-full h-full bg-gradient-to-b from-background via-transparent to-background'></div>
-          {/* end square gradiant grid background */}
+          {/* -  end square gradiant grid background */}
 
 
           <h1 className='relative z-30 text-4xl mb-5 py-2 dark:text-slate-200'>
