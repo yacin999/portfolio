@@ -105,6 +105,9 @@ export const skillsIcons = [
     name: "tailwindcss",
     icon : "/assets/skills/tailwindcss.svg"
   },
+  { name: "Framer Motion",
+    icon : "/assets/skills/framermotion.svg"
+  },
   {
     name: "bootstrap",
     icon : "/assets/skills/bootstrap.svg"
@@ -129,5 +132,59 @@ export const skillsIcons = [
     name: "prisma",
     icon : "/assets/skills/prisma.svg"
   }
+]
+
+
+export const porjects = [
+  {
+    name : 'university managment system',
+    image : '/assets/projects/renovado.png',
+    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    demoLink : '',
+    sourceCode : ''
+  },
+  {
+    name : 'Plura',
+    image : '/assets/projects/renovado.png',
+    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    demoLink : '',
+    sourceCode : ''
+  },
+  {
+    name : 'vehicle routing problem API',
+    image : '/assets/projects/renovado.png',
+    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    demoLink : '',
+    sourceCode : ''
+  },
+  {
+    name : 'Ecommerce Delivery Mobile App',
+    image : '/assets/projects/renovado.png',
+    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    demoLink : '',
+    sourceCode : ''
+  },
+  {
+    name : 'Youtube Clone',
+    image : '/assets/projects/renovado.png',
+    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    demoLink : '',
+    sourceCode : ''
+  },
+  {
+    name : 'Renovado',
+    image : '/assets/projects/renovado.png',
+    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    demoLink : '',
+    sourceCode : ''
+  },
+  {
+    name : 'boutique services info',
+    image : '/assets/projects/renovado.png',
+    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    demoLink : '',
+    sourceCode : ''
+  }
+  
 ]
   
