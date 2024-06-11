@@ -2,6 +2,8 @@ import React from 'react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card'
 import { porjects } from '@/constants'
 import Image from 'next/image'
+import Link from 'next/link'
+import { ArrowUpRight } from 'lucide-react'
 
 
 const Projects = () => {
@@ -36,7 +38,14 @@ const Projects = () => {
                 <p className='text-sm text-slate-300'>{project.description}</p>
               </CardContent>
               <CardFooter>
-                
+                <Link 
+                  href={project.demoLink}
+                  className='px-3 py-2 bg-zinc-950 rounded-md flex items-center gap-2 text-sm'
+                  target='_blank'
+                >
+                  see demo 
+                  <ArrowUpRight size={15}/>
+                </Link>
               </CardFooter>
             </Card>
           ))}

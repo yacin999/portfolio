@@ -140,49 +140,49 @@ export const porjects = [
     name : 'university managment system',
     image : '/assets/projects/renovado.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : '',
+    demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
   {
     name : 'Plura',
     image : '/assets/projects/renovado.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : '',
+    demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
   {
     name : 'vehicle routing problem API',
     image : '/assets/projects/renovado.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : '',
+    demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
   {
     name : 'Ecommerce Delivery Mobile App',
-    image : '/assets/projects/renovado.png',
+    image : '/assets/projects/boutiqueservicesinfo.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : '',
+    demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
   {
     name : 'Youtube Clone',
-    image : '/assets/projects/renovado.png',
+    image : '/assets/projects/boutiqueservicesinfo.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : '',
+    demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
   {
     name : 'Renovado',
     image : '/assets/projects/renovado.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : '',
+    demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
   {
     name : 'boutique services info',
-    image : '/assets/projects/renovado.png',
+    image : '/assets/projects/boutiqueservicesinfo.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : '',
+    demoLink : 'https://boutserinfo.com/',
     sourceCode : ''
   }
   
