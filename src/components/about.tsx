@@ -4,6 +4,8 @@ import Image from 'next/image'
 import React from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
 import { skillsIcons } from '@/constants'
+import { AnimatedTooltip } from './ui/animated-tooltip'
+import { SkullIcon } from 'lucide-react'
 
 type Props = {}
 
@@ -88,7 +90,7 @@ const About = (props: Props) => {
         <span className="absolute inset-x-0 w-[80%] mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#00CC00] to-transparent  h-[2px]"></span>
         </h1> */}
 
-        <div className='z-30 flex items-center justify-center gap-3 flex-wrap mt-24'>
+        {/* <div className='z-30 flex items-center justify-center gap-3 flex-wrap mt-24'>
             {skillsIcons.map(skill=>(
               <Image
                 key={skill.name}
@@ -99,8 +101,8 @@ const About = (props: Props) => {
                 className='rounded-full border-2 border-border bg-background'
               />
             ))}
-          </div>
-
+          </div> */}
+          <AnimatedTooltip items={skillsIcons}/>
     </section>
   )
 }

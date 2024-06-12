@@ -4,9 +4,14 @@ type Props = {}
 
 const Contact = (props: Props) => {
   return (
-    <div>
-        https://ui.aceternity.com/components/signup-form
-    </div>
+    <section className='flex'>
+      <div>
+
+      </div>
+      <div>
+        
+      </div>
+    </section>
   )
 }
 

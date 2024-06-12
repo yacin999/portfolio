@@ -5,6 +5,7 @@ import { FloatingNav } from "@/components/ui/floating-navbar";
 import Hero from "@/components/hero";
 import About from "@/components/about";
 import Projects from "@/components/projects";
+import Contact from "@/components/contact";
 
 
 const i18nNamespaces = ['home'];
@@ -33,6 +34,7 @@ export default async function Home({params : {locale}} : {params : any}) {
         <Hero/>
         <About/>
         <Projects/>
+        <Contact/>
       </main>
     </TranslationsProvider>
   );
