@@ -42,14 +42,6 @@ export function Form() {
           <Input id="phone" placeholder="07........" type="text"/>
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
-          <Label htmlFor="subject">Subject</Label>
-          <Input
-            id="ubject"
-            placeholder="Subject"
-            type="text"
-          />
-        </LabelInputContainer>
-        <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Message</Label>
           <Textarea
             id="message"
