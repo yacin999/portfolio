@@ -3,6 +3,7 @@ import React from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
+import { Textarea } from "./textarea";
 
 
 export function Form() {
@@ -45,6 +46,13 @@ export function Form() {
             id="ubject"
             placeholder="Subject"
             type="text"
+          />
+        </LabelInputContainer>
+        <LabelInputContainer className="mb-8">
+          <Label htmlFor="message">Message</Label>
+          <Textarea
+            id="message"
+            placeholder="Message..."
           />
         </LabelInputContainer>
         
