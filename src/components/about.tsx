@@ -12,7 +12,7 @@ type Props = {}
 
 const About = (props: Props) => {
   return (
-    <section className='flex flex-col items-center mt-10 p-20 relative w-full bg-hero bg-[#191A19] mb-10'>
+    <section id='about' className='flex flex-col items-center mt-10 p-20 relative w-full bg-hero bg-[#191A19] mb-10'>
       <GradiantGridBackground/>
       <h1 className='relative z-30 text-4xl mb-5 py-2 dark:text-slate-200'>
       About me

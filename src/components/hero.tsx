@@ -13,7 +13,7 @@ const Hero = () => {
   const { t } = useTranslation()
   const { locale } = useParams()
   return (
-    <section className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'>
+    <section id='hero' className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'>
 
       <div className='absolute z-0 bottom-0 left-0 right-0 top-0 w-full h-full bg-gradient-to-b from-background via-transparent to-background'></div> 
 
