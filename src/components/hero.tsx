@@ -36,8 +36,8 @@ const Hero = () => {
           </h1>
           <p className="text-md md:max-lg:text-lg mb-8 dark:text-slate-300">{t("hero.details")}</p>
           <div className=' flex items-center gap-6'>
-            <Link href={"/#work"} className='px-4 py-2 rounded-sm bg-[#00CC00] shadow-[0_2px_10px_1px_#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'> {t("hero.hireBtn")}</Link>
-            <Link href={"/#work"} className='px-4 py-2 rounded-sm border-2 border-[#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'>{t("hero.workBtn")}</Link>
+            <Link href={"/#contact"} className='px-4 py-2 rounded-sm bg-[#00CC00] shadow-[0_2px_10px_1px_#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'> {t("hero.hireBtn")}</Link>
+            <Link href={"/#projects"} className='px-4 py-2 rounded-sm border-2 border-[#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'>{t("hero.workBtn")}</Link>
           </div>
         </div>
 
