@@ -1,14 +1,17 @@
 "use client"
 
-import React from 'react'
+import React, {lazy} from 'react'
 import { Form } from './ui/form'
 import { socialMedia } from '@/constants'
 import Image from 'next/image'
 import GradiantGridBackground from './gradiant-grid-background'
-import Facebook from './icons/Facebook'
-import LinkedIn from './icons/LinkedIn'
-import Github from './icons/Github'
 import Link from 'next/link'
+
+const iconsComponents : any = {
+  Facebook: lazy(() => import('./icons/Facebook')),
+  LinkedIn: lazy(() => import('./icons/LinkedIn')),
+  Github: lazy(() => import('./icons/Github')),
+};
 
 type Props = {}
 
@@ -22,23 +25,12 @@ const Contact = (props: Props) => {
           <div className='text-md  text-blue-500 border-2 border-blue-500 rounded-full bg-background  px-5 py-2 w-fit'>phone : 0676299345</div>
         </div>
         <div className='flex gap-5 items-center'>
-          {socialMedia.map(icon=> (
-            <Link key={icon.name} href={icon.link}>
-              <icon.component />
+          {socialMedia.map(icon=> {
+            const Component = iconsComponents[icon.component]
+            return <Link key={icon.name} href={icon.link}>
+              <Component size={30}/>
             </Link>
-          ))}
-
-          {/* <Link src={}>
-            <Facebook size={25}/>
-          </Link>
-          
-          <Link src={}>
-            <LinkedIn size={25}/>
-          </Link>
-          
-          <Link src={}>
-            <Github  size={25}/>
-          </Link> */}
+          })}
         </div>
       </div>
       <div className='flex-1'>
