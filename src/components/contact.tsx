@@ -24,7 +24,7 @@ const Contact = (props: Props) => {
               width={25}
               height={25}
               alt={icon.name}
-              className=''
+              className='cursor-pointer'
             />
           ))}
         </div>
