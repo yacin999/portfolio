@@ -6,6 +6,7 @@ import Hero from "@/components/hero";
 import About from "@/components/about";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
+import Footer from "@/components/footer";
 
 
 const i18nNamespaces = ['home'];
@@ -35,6 +36,7 @@ export default async function Home({params : {locale}} : {params : any}) {
         <About/>
         <Projects/>
         <Contact/>
+        <Footer/>
       </main>
     </TranslationsProvider>
   );
