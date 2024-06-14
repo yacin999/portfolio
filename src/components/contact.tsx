@@ -5,6 +5,10 @@ import { Form } from './ui/form'
 import { socialMedia } from '@/constants'
 import Image from 'next/image'
 import GradiantGridBackground from './gradiant-grid-background'
+import Facebook from './icons/Facebook'
+import LinkedIn from './icons/LinkedIn'
+import Github from './icons/Github'
+import Link from 'next/link'
 
 type Props = {}
 
@@ -18,15 +22,23 @@ const Contact = (props: Props) => {
           <div className='text-md  text-blue-500 border-2 border-blue-500 rounded-full bg-background  px-5 py-2 w-fit'>phone : 0676299345</div>
         </div>
         <div className='flex gap-5 items-center'>
-          {socialMedia.map(icon=>(
-            <Image  
-              src={icon.src}
-              width={40}
-              height={40}
-              alt={icon.name}
-              className='cursor-pointer'
-            />
+          {socialMedia.map(icon=> (
+            <Link key={icon.name} href={icon.link}>
+              <icon.component />
+            </Link>
           ))}
+
+          {/* <Link src={}>
+            <Facebook size={25}/>
+          </Link>
+          
+          <Link src={}>
+            <LinkedIn size={25}/>
+          </Link>
+          
+          <Link src={}>
+            <Github  size={25}/>
+          </Link> */}
         </div>
       </div>
       <div className='flex-1'>

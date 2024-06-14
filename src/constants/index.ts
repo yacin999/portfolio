@@ -212,15 +212,18 @@ export const porjects = [
 export const socialMedia = [
   {
     name : "facebook",
-    src : "/assets/social-media/facebook.svg"
+    component : "Facebook",
+    link : "https://www.facebook.com/yacin.pitcho/"
   },
   {
     name : "linkedin",
-    src : "/assets/social-media/linkedin.svg"
+    component : "LinkedIn",
+    link : "https://www.linkedin.com/in/kelalech-omar-51a6ab198/"
   },
   {
     name : "github",
-    src : "/assets/social-media/github.svg"
+    component : "Github",
+    link : "https://github.com/yacin999"
   }
 ]
   
