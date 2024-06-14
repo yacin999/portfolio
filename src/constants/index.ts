@@ -208,4 +208,19 @@ export const porjects = [
   }
   
 ]
+
+export const socialMedia = [
+  {
+    name : "facebook",
+    src : "/assets/social-media/facebook.svg"
+  },
+  {
+    name : "linkedin",
+    src : "/assets/social-media/linkedin.svg"
+  },
+  {
+    name : "github",
+    src : "/assets/social-media/github.svg"
+  }
+]
   
