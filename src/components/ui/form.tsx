@@ -5,16 +5,54 @@ import { Input } from "../ui/input";
 import { cn } from "@/lib/utils";
 import { Textarea } from "./textarea";
 import { SendHorizonal } from "lucide-react";
+import { z } from "zod"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { useForm } from "react-hook-form"
 
 
 export function Form() {
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
   };
+
+
+  const phoneValidation = /^(05|06|07)\d{8}$/
+  const ContactFormSchema = z.object({
+    firstName : z.string().min(2, {
+      message : "Name must be at least 2 characters."
+    }),
+    lastName : z.string().min(2, {
+      message : "Name must be at least 2 characters."
+    }),
+    email : z.string().email(),
+    phone : z.string()
+    .regex(phoneValidation, {
+      message : "phone number must start either by 05 or 06 or 07"
+    })
+    .length(10, {
+      message : "phone number must contain 10 characters"
+    }),
+    message : z.string().min(4)
+  })
+
+  const form = useForm<z.infer<typeof ContactFormSchema>>({
+    mode : "onChange",
+    resolver : zodResolver(ContactFormSchema),
+    defaultValues  : {
+      firstName : "",
+      lastName : "",
+      email : "",
+      phone : "",
+      message : ""
+    }
+  })
+
+
   return (
     <div className="relative z-30 max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-zinc-900">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Want to cantact us ?
+        Want to contact us?
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
         Have questions or need our services? Reach out to us today by sending us a message bellow
@@ -24,11 +62,11 @@ export function Form() {
         <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
           <LabelInputContainer>
             <Label htmlFor="firstname">First name</Label>
-            <Input id="firstname" placeholder="Tyler" type="text" />
+            <Input id="firstname" placeholder="John" type="text" />
           </LabelInputContainer>
           <LabelInputContainer>
             <Label htmlFor="lastname">Last name</Label>
-            <Input id="lastname" placeholder="Durden" type="text" />
+            <Input id="lastname" placeholder="Doe" type="text" />
           </LabelInputContainer>
         </div>
         <LabelInputContainer className="mb-4">
