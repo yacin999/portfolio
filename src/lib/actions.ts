@@ -16,21 +16,21 @@ type EmailData = {
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async (values : EmailData) => {
-
+    const {firstName, lastName, message, email} = values
     const { data, error } = await resend.emails.send({
-        from: 'Acme <onboarding@resend.dev>',
+        from: 'Portfolio <noreply@kelalechomar.info>',
         to: [`${process.env.EMAIL_RECEIVER}`],
-        subject: 'message from client',
+        subject: `message from ${firstName} ${lastName}`,
         react: EmailTemplate({ 
-            firstName: values.firstName , 
-            lastName : values.lastName, 
-            message : values.message
+            firstName: firstName , 
+            lastName : lastName, 
+            message : message
         }),
         text : ""
       });
     
       if (error) {
-        return error
+        return Error(error.message)
       }
     
       return data
