@@ -1,19 +1,22 @@
-// import { OrbitControls, OrbitControlsProps, Preload, useGLTF } from "@react-three/drei";
-// import { Object3DNode, Node} from "@react-three/fiber";
+import { z } from "zod";
 
 
+const phoneValidation = /^(05|06|07)\d{8}$/
 
-
-
-// declare module '@react-three/fiber' {
-//     interface ThreeElements {
-//         orbitControls: Node<OrbitControlsProps, typeof OrbitControls>,
-//         preload : Node<typeof Preload, typeof Preload>,
-//         // useGLTF : Node<typeof useGLTF, typeof useGLTF>
-//     }
-//   }
-
-
-
-
-type screenSizes = "mobile" | "sm" | "md" | "lg" | "xl" | "2xl"
+export const ContactFormSchema = z.object({
+    firstName : z.string().min(2, {
+      message : "Name must be at least 2 characters."
+    }),
+    lastName : z.string().min(2, {
+      message : "Name must be at least 2 characters."
+    }),
+    email : z.string().email(),
+    phone : z.string()
+    .length(10, {
+      message : "phone number must contain 10 characters"
+    })
+    .regex(phoneValidation, {
+      message : "phone number must be a number and start either by 05 or 06 or 07"
+    }),
+    message : z.string().min(4)
+  })

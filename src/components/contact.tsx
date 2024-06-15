@@ -1,7 +1,7 @@
 "use client"
 
 import React, {lazy} from 'react'
-import { Form } from './ui/form'
+import { FormWrapper } from './ui/form-wrapper'
 import { socialMedia } from '@/constants'
 import GradiantGridBackground from './gradiant-grid-background'
 import Link from 'next/link'
@@ -32,7 +32,7 @@ const Contact = () => {
         </div>
       </div>
       <div className='flex-1'>
-        <Form/>
+        <FormWrapper/>
       </div>
     </section>
   )
