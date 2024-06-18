@@ -24,6 +24,7 @@ export const sendEmail = async (values : EmailData) => {
         react: EmailTemplate({ 
             firstName: firstName , 
             lastName : lastName, 
+            email : email,
             message : message
         }),
         text : ""

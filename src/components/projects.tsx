@@ -9,7 +9,7 @@ import GradiantGridBackground from './gradiant-grid-background'
 
 const Projects = () => {
   return (
-    <section id='projects' className='relative w-full mb-40'>
+    <section id='projects' className='relative w-full mb-40 bg-hero'>
       <GradiantGridBackground/>
       <div className='flex flex-col items-center'>
         <h1 className='relative z-30 text-4xl mb-5 py-2 dark:text-slate-200 w-fit'>

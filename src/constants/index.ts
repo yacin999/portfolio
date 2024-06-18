@@ -166,9 +166,9 @@ export const porjects = [
   },
   {
     name : 'Plura',
-    image : '/assets/projects/renovado.png',
-    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : 'https://renovado-ruddy.vercel.app/',
+    image : '/assets/projects/plura.png',
+    description : 'A SaaS Website Builder for building simple applications and project Management features with a great dashboard that was built using Stripe , Nextjs , Stripe , Prisma, cockroatchDB and Tailwind',
+    demoLink : 'https://plurapp.vercel.app/',
     sourceCode : ''
   },
   {
