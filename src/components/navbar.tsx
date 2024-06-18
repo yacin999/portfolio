@@ -20,8 +20,8 @@ const Navbar = () => {
 
 
     return (
-        <nav id='home' className="fixed top-0 z-40 w-full px-10 md:px-20 py-4 backdrop-blur-lg h-[70px] border-b">
-            <div className="flex items-center justify-between">
+        <nav id='home' className="flex items-center fixed top-0 z-40 w-full px-10 md:px-20 py-4 backdrop-blur-lg h-[70px] border-b">
+            <div className="w-full flex items-center justify-between">
                 <aside>
                     <div className='relative flex items-end ltr cursor-pointer'>
                         <Image
