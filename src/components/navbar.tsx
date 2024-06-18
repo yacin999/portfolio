@@ -45,7 +45,7 @@ const Navbar = () => {
                 </div>
                 <aside className="flex items-center gap-8">
                     <LanguageChanger/>
-                    <ModeToggle/>
+                    {/* <ModeToggle/> */}
                 </aside>
             </div>
     </nav>
