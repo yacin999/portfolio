@@ -27,7 +27,7 @@ const Hero = () => {
           })}
           initial={{scale : 0.8, opacity : 0}}
           animate={{scale : 1, opacity : 1}}
-          transition={{duration : 2, ease : "linear"}}
+          transition={{duration : 0.2, ease : "linear"}}
         >
             <p className={clsx("w-full flex items-center gap-2 uppercase mb-4 dark:text-slate-200 text-sm lg:text-md tracking-widest", {
               [orbitron.className] : locale === "fr" || locale === "en",
