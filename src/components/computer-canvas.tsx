@@ -31,29 +31,30 @@ const Computer = ({screenSize, locale}: {
     // })
     
     const mouse = {
-        x : useMotionValue(0),
+        y : useMotionValue(0),
     }
 
     const manageMouseMove = (e: any) => {
         const {innerWidth, innerHeight } = window
         const {clientX, clientY } = e
-        // const x = -0.5 + (clientX / innerWidth)
-        const x = -0.5 + (clientY / innerHeight)
+        const y = -0.5 + (clientX / innerWidth)
+        // const x = -0.5 + (clientY / innerHeight)
 
-        mouse.x.set(x)
-        // mouse.y.set(y)
+        // mouse.x.set(x)
+        mouse.y.set(y)
     }
+
+ 
 
     useEffect(()=> {
         window.addEventListener('mousemove', manageMouseMove)
-
         return () => window.removeEventListener('mouse', manageMouseMove) 
     })
 
 
   return (
     <motion.mesh
-        rotation-x={mouse.x}
+        rotation-y={mouse.y}
     >
         <hemisphereLight intensity={4} /> 
         <pointLight intensity={1}/>
@@ -128,7 +129,7 @@ const ComputerCanvas = ({locale} : {locale : string | string[]})=> {
             gl={{preserveDrawingBuffer : true}}
             className='max-w-full max-h-full'
         >
-            <Suspense fallback={null}>
+            <Suspense fallback={<CanvasLoader/>}>
                 {/* this component allows us to orbit the models using mouse */}
                 <OrbitControls 
                     enableZoom={false}

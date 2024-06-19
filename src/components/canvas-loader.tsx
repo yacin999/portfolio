@@ -1,9 +1,8 @@
 import React from 'react'
 import { useProgress, Html } from '@react-three/drei'
 
-type Props = {}
 
-const CanvasLoader = (props: Props) => {
+const CanvasLoader = () => {
   const { progress } = useProgress()
   return (
     <Html>
