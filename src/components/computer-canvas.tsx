@@ -30,31 +30,31 @@ const Computer = ({screenSize, locale}: {
     //     }
     // })
     
-    const mouse = {
-        y : useMotionValue(0),
-    }
+    // const mouse = {
+    //     y : useMotionValue(0),
+    // }
 
-    const manageMouseMove = (e: any) => {
-        const {innerWidth, innerHeight } = window
-        const {clientX, clientY } = e
-        const y = -0.5 + (clientX / innerWidth)
+    // const manageMouseMove = (e: any) => {
+    //     const {innerWidth, innerHeight } = window
+    //     const {clientX, clientY } = e
+    //     const y = -0.5 + (clientX / innerWidth)
         // const x = -0.5 + (clientY / innerHeight)
 
         // mouse.x.set(x)
-        mouse.y.set(y)
-    }
+    //     mouse.y.set(y)
+    // }
 
  
 
-    useEffect(()=> {
-        window.addEventListener('mousemove', manageMouseMove)
-        return () => window.removeEventListener('mouse', manageMouseMove) 
-    })
+    // useEffect(()=> {
+    //     window.addEventListener('mousemove', manageMouseMove)
+    //     return () => window.removeEventListener('mouse', manageMouseMove) 
+    // })
 
 
   return (
     <motion.mesh
-        rotation-y={mouse.y}
+        // rotation-y={mouse.y}
     >
         <hemisphereLight intensity={4} /> 
         <pointLight intensity={1}/>

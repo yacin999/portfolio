@@ -71,6 +71,14 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        travel : {
+          '0%' : {
+            "stroke-dashoffset" : "0"
+          },
+          '100%' : {
+            "stroke-dashoffset" : "100"
+          }
+        }
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
