@@ -49,7 +49,11 @@ export const AnimatedTooltip = ({
           <AnimatePresence mode="popLayout">
             {hoveredIndex === item.id && (
               <motion.div
-                initial={{ opacity: 0, y: 20, scale: 0.6 }}
+                initial={{ 
+                  opacity: 0, 
+                  y: 20, 
+                  scale: 0.6 
+                }}
                 animate={{
                   opacity: 1,
                   y: 0,
@@ -77,14 +81,29 @@ export const AnimatedTooltip = ({
               </motion.div>
             )}
           </AnimatePresence>
-          <Image
-            onMouseMove={handleMouseMove}
-            height={100}
-            width={100} 
-            src={item.image}
-            alt={item.name}
-            className="object-cover !m-0 !p-0 object-top rounded-full h-10 w-10 group-hover:scale-105 group-hover:z-30  relative transition duration-500 bg-slate-200"
-          />
+          <motion.div
+            initial={{
+              opacity: 0, 
+              x : 300,
+              scale: 0.6 
+            }}
+             whileInView={{
+              opacity: 1, 
+              x : 0,
+              scale: 1 
+            }}
+            transition={{duration : 0.4, delay : 0.3}}
+            viewport={{once : true}} 
+          >
+            <Image
+              onMouseMove={handleMouseMove}
+              height={100}
+              width={100} 
+              src={item.image}
+              alt={item.name}
+              className="object-cover !m-0 !p-0 object-top rounded-full h-10 w-10 group-hover:scale-105 group-hover:z-30  relative transition duration-500 bg-slate-200"
+            />
+          </motion.div>
         </div>
       ))}
     </div>
