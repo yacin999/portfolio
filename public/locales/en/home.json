@@ -14,5 +14,20 @@
         "details" : "A passionate Web Developer specializing in modern web technologies, equipped with a diverse and promising skill set, to bring innovative ideas to life on the web.",
         "hireBtn" : "Hire me",
         "workBtn" : "My Work"
+    },
+    "about" : {
+        "title" : "About me",
+        "description" : "I discovered my passion for coding in my first year of university, driving me to continually improve my web development skills and stay current with industry trends. With a Computer Science degree and certifications in Full Stack Web Development and Project Management, I blend technical expertise with strategic insight.",
+        "frontend" : {
+            "title" : "Frontend developer",
+            "description" : "I specialize in front-end development, with a good understanding of SSR, SSG that Next js introduces and a solid knowledge in HTML, CSS, JavaScript, and React..."
+        },
+        "backend" : {
+            "title" : "Backend developer",
+            "description" : "I have a solid understanding of back-end technologies and Databases like Node.js, Django and Django Rest Framework for building powerfull APIs.."
+        }
+    },
+    "contact" : {
+        
     }
 }

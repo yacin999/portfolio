@@ -48,7 +48,7 @@ const LanguageChanger = () => {
         </DropdownMenuTrigger>
         <DropdownMenuContent className='min-w-20'>
             <DropdownMenuRadioGroup value={currentLocale} onValueChange={handleChange}>
-                {["en", "fr", "ar"].map(lacale=> (
+                {["en", "ar"].map(lacale=> (
                     <DropdownMenuRadioItem key={lacale} value={lacale} checked={lacale === currentLocale} >{lacale}</DropdownMenuRadioItem>
                 ))}
             </DropdownMenuRadioGroup>
