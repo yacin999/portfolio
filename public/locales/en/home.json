@@ -28,6 +28,17 @@
         }
     },
     "contact" : {
-        
+        "email" : "Email",
+        "phone" : "Phone",
+        "form" : {
+            "heading" : "Want to contact us ?",
+            "description" : "Have questions or need our services? Reach out to us today by sending us a message bellow",
+            "firstName" : "First name",
+            "lastName" : "Last name",
+            "emailAddress" : "Email Address",
+            "phoneNumber" : "Phone Number",
+            "message" : "Message",
+            "send" : "Send"
+        }
     }
 }

@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Label } from "./label";
 import { Input } from "./input";
@@ -11,9 +12,13 @@ import { useForm } from "react-hook-form"
 import { Form, FormControl, FormField, FormItem, FormMessage } from "./form"
 import { ContactFormSchema } from "@/lib/types"
 import { sendEmail } from "@/lib/actions";
+import { useTranslation } from "next-i18next";
+import { useParams } from "next/navigation";
 
 
 export function FormWrapper() {
+  const { t } = useTranslation()
+  const { locale } = useParams()
 
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     mode : "onChange",
@@ -42,21 +47,21 @@ export function FormWrapper() {
   return (
     <div className="relative z-30 max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-zinc-900">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
-        Want to contact us?
+        {t("contact.form.heading")}
       </h2>
       <p className="text-neutral-600 text-sm max-w-sm mt-2 dark:text-neutral-300">
-        Have questions or need our services? Reach out to us today by sending us a message bellow
+      {t("contact.form.description")}
       </p>
       <Form  {...form}>
         <form className="my-8" onSubmit={form.handleSubmit(submitForm)}>
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-2 mb-4">
+          <div className="flex flex-col md:flex-row md:gap-2 space-y-2 md:space-y-0 md:space-x-2 mb-4">
             <LabelInputContainer>
               <FormField 
                 control={form.control}
                 name="firstName"
                 render={({field})=>(
                   <FormItem>
-                    <Label htmlFor="firstname">First name</Label>
+                    <Label htmlFor="firstname">{t("contact.form.firstName")}</Label>
                     <FormControl>
                       <Input id="firstname" placeholder="John" {...field}/>
                     </FormControl>
@@ -71,7 +76,7 @@ export function FormWrapper() {
                 name="lastName"
                 render={({field})=>(
                   <FormItem>
-                    <Label htmlFor="lastName">Last name</Label>
+                    <Label htmlFor="lastName">{t("contact.form.lastName")}</Label>
                     <FormControl>
                       <Input id="lastName" placeholder="Doe" {...field}/>
                     </FormControl>
@@ -87,7 +92,7 @@ export function FormWrapper() {
                 name="email"
                 render={({field})=>(
                   <FormItem>
-                    <Label htmlFor="email">Email Address</Label>
+                    <Label htmlFor="email">{t("contact.form.emailAddress")}</Label>
                     <FormControl>
                       <Input id="email" placeholder="example@gmail.com" {...field}/>
                     </FormControl>
@@ -102,7 +107,7 @@ export function FormWrapper() {
                 name="phone"
                 render={({field})=>(
                   <FormItem>
-                    <Label htmlFor="phone">Phone Number</Label>
+                    <Label htmlFor="phone">{t("contact.form.phoneNumber")}</Label>
                     <FormControl>
                       <Input id="phone" placeholder="07........" {...field}/>
                     </FormControl>
@@ -117,7 +122,7 @@ export function FormWrapper() {
                 name="message"
                 render={({field})=>(
                   <FormItem>
-                    <Label htmlFor="message">Message</Label>
+                    <Label htmlFor="message">{t("contact.form.message")}</Label>
                     <FormControl>
                       <Textarea
                         id="message"
@@ -135,8 +140,11 @@ export function FormWrapper() {
             className="flex items-center justify-center gap-2  relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600  dark:bg-zinc-950 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
             type="submit"
           >
-            Send 
-            <SendHorizonal className="relative" size={15}/>  
+            {t("contact.form.send")} 
+            <SendHorizonal  
+              size={15}
+              className={cn("relative", {"rotate-180" : locale === "ar"})}
+            />  
             <BottomGradient />
           </button>
         </form>
