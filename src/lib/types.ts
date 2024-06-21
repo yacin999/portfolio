@@ -20,3 +20,16 @@ export const ContactFormSchema = z.object({
     }),
     message : z.string().min(4)
   })
+
+
+
+
+interface Card {
+    description: string;
+    button: string;
+}
+
+export interface ProjectsType {
+    title: string;
+    cards: Card[];
+}

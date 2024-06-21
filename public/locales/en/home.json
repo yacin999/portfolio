@@ -1,44 +1,76 @@
 {
-    "navbar" : {
-        "home" : "Home",
-        "about" : "About",
-        "projects" : "Projects",
-        "contact" : "Contact",
-        "language" : "languages"
+  "navbar": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact",
+    "language": "languages"
+  },
+  "hero": {
+    "greeting": "hello!",
+    "heading": "I am",
+    "lastName": "Kelalech",
+    "firstName": "Omar",
+    "details": "A passionate Web Developer specializing in modern web technologies, equipped with a diverse and promising skill set, to bring innovative ideas to life on the web.",
+    "hireBtn": "Hire me",
+    "workBtn": "My Work"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I discovered my passion for coding in my first year of university, driving me to continually improve my web development skills and stay current with industry trends. With a Computer Science degree and certifications in Full Stack Web Development and Project Management, I blend technical expertise with strategic insight.",
+    "frontend": {
+      "title": "Frontend developer",
+      "description": "I specialize in front-end development, with a good understanding of SSR, SSG that Next js introduces and a solid knowledge in HTML, CSS, JavaScript, and React..."
     },
-    "hero" : {
-        "greeting" : "hello!",
-        "heading" : "I am",
-        "lastName" : "Kelalech",
-        "firstName" : "Omar",
-        "details" : "A passionate Web Developer specializing in modern web technologies, equipped with a diverse and promising skill set, to bring innovative ideas to life on the web.",
-        "hireBtn" : "Hire me",
-        "workBtn" : "My Work"
-    },
-    "about" : {
-        "title" : "About me",
-        "description" : "I discovered my passion for coding in my first year of university, driving me to continually improve my web development skills and stay current with industry trends. With a Computer Science degree and certifications in Full Stack Web Development and Project Management, I blend technical expertise with strategic insight.",
-        "frontend" : {
-            "title" : "Frontend developer",
-            "description" : "I specialize in front-end development, with a good understanding of SSR, SSG that Next js introduces and a solid knowledge in HTML, CSS, JavaScript, and React..."
-        },
-        "backend" : {
-            "title" : "Backend developer",
-            "description" : "I have a solid understanding of back-end technologies and Databases like Node.js, Django and Django Rest Framework for building powerfull APIs.."
-        }
-    },
-    "contact" : {
-        "email" : "Email",
-        "phone" : "Phone",
-        "form" : {
-            "heading" : "Want to contact us ?",
-            "description" : "Have questions or need our services? Reach out to us today by sending us a message bellow",
-            "firstName" : "First name",
-            "lastName" : "Last name",
-            "emailAddress" : "Email Address",
-            "phoneNumber" : "Phone Number",
-            "message" : "Message",
-            "send" : "Send"
-        }
+    "backend": {
+      "title": "Backend developer",
+      "description": "I have a solid understanding of back-end technologies and Databases like Node.js, Django and Django Rest Framework for building powerfull APIs.."
     }
+  },
+  "projects": {
+    "title": "projects",
+    "cards": [
+      {
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+        "button": "see demo"
+      },
+      {
+        "description": "A SaaS Website Builder for building simple applications and project Management features with a great dashboard that was built using Stripe , Nextjs , Stripe , Prisma, cockroatchDB and Tailwind",
+        "button": "see demo"
+      },
+      {
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+        "button": "see demo"
+      },
+      {
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+        "button": "see demo"
+      },
+      {
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+        "button": "see demo"
+      },
+      {
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+        "button": "see demo"
+      }
+    ]
+  },
+  "contact": {
+    "email": "Email",
+    "phone": "Phone",
+    "form": {
+      "heading": "Want to contact us ?",
+      "description": "Have questions or need our services? Reach out to us today by sending us a message bellow",
+      "firstName": "First name",
+      "lastName": "Last name",
+      "emailAddress": "Email Address",
+      "phoneNumber": "Phone Number",
+      "message": "Message",
+      "send": "Send"
+    }
+  },
+  "footer": {
+    "copyright": "Kelalech Omar . All rights reserved"
+  }
 }

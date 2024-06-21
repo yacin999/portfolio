@@ -27,6 +27,35 @@
             "description" : "لدي فهم قوي للتقنيات الخلفية وقواعد البيانات مثل Node.js وDjango وDjango Rest Framework لبناء واجهات برمجة لتطبيقات القوية."
         }  
     },
+    "projects" : {
+        "title" : "المشاريع",
+        "cards" : [
+            {
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "button" : "see demo"
+            },
+            {
+                "description" : "أداة إنشاء مواقع SaaS لإنشاء تطبيقات بسيطة وميزات إدارة المشاريع مع لوحة تحكم رائعة تم إنشاؤها باستخدام Stripe وNextjs وStripe وPrisma وcockroatchDB وTailwind",
+                "button" : "see demo"
+            },
+            {
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "button" : "see demo"
+            },
+            {
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "button" : "see demo"
+            },
+            {
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "button" : "see demo"
+            },
+            {
+                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "button" : "see demo"
+            }
+        ]
+    },
     "contact" : {
         "email" : "البريد الالكتروني",
         "phone" : "رقم الهاتف",
@@ -40,5 +69,8 @@
             "message" : "الرسالة",
             "send" : "ارسال"
         }
+    },
+    "footer" : {
+        "copyright" : "كل الحقوق محفوظة . قلالش عمر"
     }
 }

@@ -8,9 +8,14 @@ import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 import GradiantGridBackground from './gradiant-grid-background'
 import { motion } from "framer-motion"
+import { useTranslation } from 'next-i18next'
+import { ProjectsType } from '@/lib/types'
 
 
 const Projects = () => {
+  const { t } = useTranslation()
+  console.log("test translation", t('projects.cards', { returnObjects: true }))
+  const translatedProjects = t('projects', { returnObjects: true }) as ProjectsType
   return (
     <section id='projects' className='relative w-full mb-40 bg-hero'>
       <GradiantGridBackground/>
@@ -22,40 +27,41 @@ const Projects = () => {
           transition={{duration : 0.4, delay : 0.4}}
           viewport={{once : true}}
         >
-          Projects
+          {t("projects.title")}
           <span className="absolute inset-x-0 w-[80%] mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#00CC00] to-transparent  h-[2px]"/>
         </motion.h1>
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full pt-10 px-20 md:px-[100px] lg:px-[150px]'>
-          {porjects.map(project=>(
+          {translatedProjects.cards.map((card, idx)=>(
             <motion.div
               className='z-30'
               initial={{ y : 50, opacity: 0 }}
               whileInView={{ y : 0, opacity : 1}}
               transition={{duration : 0.4, delay : 0.4}}
               viewport={{once : true}}
+              key={idx}
             >
-              <Card key={project.name} className='w-full h-full flex flex-col bg-zinc-900'>
+              <Card className='w-full h-full flex flex-col bg-zinc-900'>
                 <CardHeader>
                   <Image  
-                    src={project.image}
+                    src={porjects[idx].image}
                     width={400}
                     height={300}
-                    alt={project.name}
+                    alt={porjects[idx].name}
                     className='w-auto rounded-sm'
                   />
                 </CardHeader>
                 <CardContent>
-                  <h2 className='text-xl mb-5 text-slate-200'>{project.name}</h2>
-                  <p className='text-sm text-slate-300'>{project.description}</p>
+                  <h2 className='text-xl mb-5 text-slate-200'>{porjects[idx].name}</h2>
+                  <p className='text-sm text-slate-300'>{card.description}</p>
                 </CardContent>
                 <CardFooter className='mt-auto flex'>
                   <Link 
-                    href={project.demoLink}
+                    href={porjects[idx].demoLink}
                     className='px-3 py-2 bg-zinc-950 rounded-md flex items-center gap-2 text-sm'
                     target='_blank'
                   >
-                    see demo 
+                    {card.button} 
                     <ArrowUpRight size={15}/>
                   </Link>
                 </CardFooter>
