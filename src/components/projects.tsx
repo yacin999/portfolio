@@ -20,7 +20,6 @@ import { Badge } from './ui/badge'
 const Projects = () => {
   const { t } = useTranslation()
   const { locale } = useParams()
-  console.log("test translation", t('projects.cards', { returnObjects: true }))
   const translatedProjects = t('projects', { returnObjects: true }) as ProjectsType
   return (
     <section id='projects' className='relative w-full mb-40 bg-hero'>
