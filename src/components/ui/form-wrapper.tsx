@@ -15,6 +15,7 @@ import { sendEmail } from "@/lib/actions";
 import { useTranslation } from "next-i18next";
 import { useParams } from "next/navigation";
 import { useToast } from "./use-toast";
+import Loading from "../loading";
 
 
 export function FormWrapper() {
@@ -149,15 +150,23 @@ export function FormWrapper() {
           </LabelInputContainer>
 
           <button
-            className="flex items-center justify-center gap-2  relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600  dark:bg-zinc-950 w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]"
+            className={cn("flex items-center justify-center gap-2  relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600  w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]", {
+              "dark:bg-zinc-950" : !formIsLoading,
+              "dark:bg-zinc-500" : formIsLoading
+            })}
             type="submit"
+            disabled={true}
           >
-            {t("contact.form.send")} 
-            <SendHorizonal  
-              size={15}
-              className={cn("relative", {"rotate-180" : locale === "ar"})}
-            />  
-            <BottomGradient />
+            {formIsLoading ? <Loading/> : 
+              <>
+                {t("contact.form.send")}
+                <SendHorizonal  
+                  size={15}
+                  className={cn("relative", {"rotate-180" : locale === "ar"})}
+                />  
+                <BottomGradient />
+              </>
+            }
           </button>
         </form>
       </Form>
