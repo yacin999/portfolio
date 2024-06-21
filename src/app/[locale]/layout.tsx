@@ -5,6 +5,7 @@ import i18nConfig from "../../../i18nConfig";
 import { dir } from "i18next";
 import clsx from "clsx";
 import { changa, inter } from "../fonts";
+import { Toaster } from "@/components/ui/toaster";
 
 
 export const metadata: Metadata = {
@@ -43,6 +44,7 @@ export default function RootLayout({
             disableTransitionOnChange
         >
           {children}
+          <Toaster />
         </ThemeProvider>
       </body>
     </html>

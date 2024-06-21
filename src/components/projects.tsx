@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent, CardFooter, CardHeader } from './ui/card'
 import { projects } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'

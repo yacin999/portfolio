@@ -14,11 +14,13 @@ import { ContactFormSchema } from "@/lib/types"
 import { sendEmail } from "@/lib/actions";
 import { useTranslation } from "next-i18next";
 import { useParams } from "next/navigation";
+import { useToast } from "./use-toast";
 
 
 export function FormWrapper() {
   const { t } = useTranslation()
   const { locale } = useParams()
+  const { toast } = useToast()
 
   const form = useForm<z.infer<typeof ContactFormSchema>>({
     mode : "onChange",
@@ -38,8 +40,18 @@ export function FormWrapper() {
     try {
       const response = await sendEmail({...values})
       console.log("your email was sent successfully :", response)
+      toast({
+        title : "Success!",
+        description : "your message has been sent."
+      })
+
     } catch (error) {
       console.log("error from sending email :", error)
+      toast({ 
+        variant: "destructive",
+        title : "Error",
+        description : "Something went wrong, please type agpins."
+      })
     }
   };
 
