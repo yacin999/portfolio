@@ -22,11 +22,9 @@ export const ContactFormSchema = z.object({
   })
 
 
-
-
 interface Card {
     description: string;
-    button: string;
+    demoBtn: string;
 }
 
 export interface ProjectsType {

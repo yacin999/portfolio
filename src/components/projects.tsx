@@ -2,18 +2,24 @@
 
 import React from 'react'
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from './ui/card'
-import { porjects } from '@/constants'
+import { projects } from '@/constants'
 import Image from 'next/image'
 import Link from 'next/link'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpLeft, ArrowUpRight } from 'lucide-react'
 import GradiantGridBackground from './gradiant-grid-background'
 import { motion } from "framer-motion"
 import { useTranslation } from 'next-i18next'
 import { ProjectsType } from '@/lib/types'
+import { useParams } from 'next/navigation'
+import { cn } from '@/lib/utils'
+import Github from './icons/Github'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from './ui/tooltip'
+import { Badge } from './ui/badge'
 
 
 const Projects = () => {
   const { t } = useTranslation()
+  const { locale } = useParams()
   console.log("test translation", t('projects.cards', { returnObjects: true }))
   const translatedProjects = t('projects', { returnObjects: true }) as ProjectsType
   return (
@@ -41,29 +47,61 @@ const Projects = () => {
               viewport={{once : true}}
               key={idx}
             >
-              <Card className='w-full h-full flex flex-col bg-zinc-900'>
+              <Card className='relative w-full h-full flex flex-col bg-zinc-900'>
+                <div className='absolute top-7 right-7 flex gap-1 ltr'>
+                  {projects[idx].sourceCode !== "" && (
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <Link 
+                              href={projects[idx].sourceCode}
+                              className='px-2 py-2 bg-[#7F1D1D] rounded-md flex items-center gap-2 text-sm'
+                              target='_blank'
+                            >
+                              <Github size={15} className='fill-white'/>
+                            </Link>
+                          </TooltipTrigger>
+                          <TooltipContent sideOffset={1}>
+                            <p>Github Code</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    )
+                  }
+                  <TooltipProvider>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <Link 
+                          href={projects[idx].demoLink}
+                          className='px-2 py-2 bg-green-950 rounded-md flex items-center gap-2 text-sm'
+                          target='_blank'
+                        >
+                          <ArrowUpRight size={15} className=' stroke-[2.75px]'/> 
+                        </Link>
+                      </TooltipTrigger>
+                      <TooltipContent sideOffset={1}>
+                        <p>Live Demo</p>
+                      </TooltipContent>
+                    </Tooltip>
+                  </TooltipProvider>
+                </div>
                 <CardHeader>
                   <Image  
-                    src={porjects[idx].image}
+                    src={projects[idx].image}
                     width={400}
                     height={300}
-                    alt={porjects[idx].name}
+                    alt={projects[idx].name}
                     className='w-auto rounded-sm'
                   />
                 </CardHeader>
                 <CardContent>
-                  <h2 className='text-xl mb-5 text-slate-200'>{porjects[idx].name}</h2>
+                  <h2 className='text-xl mb-5 text-slate-200'>{projects[idx].name}</h2>
                   <p className='text-sm text-slate-300'>{card.description}</p>
                 </CardContent>
-                <CardFooter className='mt-auto flex'>
-                  <Link 
-                    href={porjects[idx].demoLink}
-                    className='px-3 py-2 bg-zinc-950 rounded-md flex items-center gap-2 text-sm'
-                    target='_blank'
-                  >
-                    {card.button} 
-                    <ArrowUpRight size={15}/>
-                  </Link>
+                <CardFooter className='mt-auto flex gap-1 flex-wrap'>
+                  {projects[idx].tools.map(tool=>(
+                    <Badge variant={"secondary"}>{tool}</Badge>
+                  ))}
                 </CardFooter>
               </Card>
             </motion.div>

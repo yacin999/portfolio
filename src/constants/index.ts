@@ -156,11 +156,12 @@ export const skillsIcons = [
 ]
 
 
-export const porjects = [
+export const projects = [
   {
     name : 'university managment system',
     image : '/assets/projects/renovado.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    tools : ["Html", "CSS", "JS", "Django", "MySQL", "Bootstrap"],
     demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
@@ -168,6 +169,7 @@ export const porjects = [
     name : 'Plura',
     image : '/assets/projects/plura.png',
     description : 'A SaaS Website Builder for building simple applications and project Management features with a great dashboard that was built using Stripe , Nextjs , Stripe , Prisma, cockroatchDB and Tailwind',
+    tools : ["Html", "CSS", "JS", "Reactjs", "Nextjs", "Tailwind Css", "Prisma", "Stripe", "Clerk"],
     demoLink : 'https://plurapp.vercel.app/',
     sourceCode : ''
   },
@@ -176,26 +178,22 @@ export const porjects = [
     image : '/assets/projects/renovado.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
     demoLink : 'https://renovado-ruddy.vercel.app/',
+    tools : ["Html", "CSS", "JS", "Reactjs", "Django", "Django Rest Framework", "MySQL"],
     sourceCode : ''
   },
   {
     name : 'Ecommerce Delivery Mobile App',
     image : '/assets/projects/boutiqueservicesinfo.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    tools : ["Html", "CSS", "JS", "Reactjs", "React Native", "Tomtom maps"],
     demoLink : 'https://renovado-ruddy.vercel.app/',
-    sourceCode : ''
+    sourceCode : 'https://github.com/yacin999/eCommerceDeliveryApp'
   },
-  // {
-  //   name : 'Youtube Clone',
-  //   image : '/assets/projects/boutiqueservicesinfo.png',
-  //   description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-  //   demoLink : 'https://renovado-ruddy.vercel.app/',
-  //   sourceCode : ''
-  // },
   {
     name : 'Renovado',
     image : '/assets/projects/renovado.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    tools : ["Html", "CSS", "JS", "Tailwind", "Reactjs", "Nextjs", "Zod"],
     demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
   },
@@ -203,6 +201,7 @@ export const porjects = [
     name : 'boutique services info',
     image : '/assets/projects/boutiqueservicesinfo.png',
     description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    tools : ["Html", "CSS", "JS", "Bootstrap"],
     demoLink : 'https://boutserinfo.com/',
     sourceCode : ''
   }

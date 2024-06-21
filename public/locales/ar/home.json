@@ -32,27 +32,33 @@
         "cards" : [
             {
                 "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
-                "button" : "see demo"
+                "demoBtn" : "عرض توضيحي",
+                "sourceCodeBtn" : "مصدر الكود"
             },
             {
                 "description" : "أداة إنشاء مواقع SaaS لإنشاء تطبيقات بسيطة وميزات إدارة المشاريع مع لوحة تحكم رائعة تم إنشاؤها باستخدام Stripe وNextjs وStripe وPrisma وcockroatchDB وTailwind",
-                "button" : "see demo"
+                "demoBtn" : "عرض توضيحي",
+                "sourceCodeBtn" : "مصدر الكود"
             },
             {
                 "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
-                "button" : "see demo"
+                "demoBtn" : "عرض توضيحي",
+                "sourceCodeBtn" : "مصدر الكود"
             },
             {
                 "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
-                "button" : "see demo"
+                "demoBtn" : "عرض توضيحي",
+                "sourceCodeBtn" : "مصدر الكود"
             },
             {
                 "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
-                "button" : "see demo"
+                "demoBtn" : "عرض توضيحي",
+                "sourceCodeBtn" : "مصدر الكود"
             },
             {
                 "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
-                "button" : "see demo"
+                "demoBtn" : "عرض توضيحي",
+                "sourceCodeBtn" : "مصدر الكود"
             }
         ]
     },
