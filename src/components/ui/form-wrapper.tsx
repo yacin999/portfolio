@@ -40,14 +40,12 @@ export function FormWrapper() {
   const submitForm = async (values : z.infer<typeof ContactFormSchema>) => {
     try {
       const response = await sendEmail({...values})
-      console.log("your email was sent successfully :", response)
       toast({
         title : "Success!",
         description : "your message has been sent."
       })
 
     } catch (error) {
-      console.log("error from sending email :", error)
       toast({ 
         variant: "destructive",
         title : "Error",
@@ -151,8 +149,8 @@ export function FormWrapper() {
 
           <button
             className={cn("flex items-center justify-center gap-2  relative group/btn from-black dark:from-zinc-900 dark:to-zinc-900 to-neutral-600  w-full text-white rounded-md h-10 font-medium shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:shadow-[0px_1px_0px_0px_var(--zinc-800)_inset,0px_-1px_0px_0px_var(--zinc-800)_inset]", {
-              "dark:bg-zinc-950" : !formIsLoading,
-              "dark:bg-zinc-500" : formIsLoading
+              "dark:bg-zinc-950 cursor-pointer" : !formIsLoading,
+              "dark:bg-zinc-500 cursor-wait" : formIsLoading
             })}
             type="submit"
             disabled={true}
