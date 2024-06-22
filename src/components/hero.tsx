@@ -8,17 +8,17 @@ import { useTranslation } from 'next-i18next'
 import { useParams } from 'next/navigation'
 import { motion } from 'framer-motion'
 import clsx from 'clsx'
+import GradiantGridBackground from './gradiant-grid-background'
 
 
 const Hero = () => {
   const { t } = useTranslation()
   const { locale } = useParams()
   return (
-    <section id='hero' className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'>
+    <section id='hero' className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'> 
+      <GradiantGridBackground/>
 
-      <div className='absolute z-0 bottom-0 left-0 right-0 top-0 w-full h-full bg-gradient-to-b from-background via-transparent to-background'></div> 
-
-      <div className='z-10 w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
+      <div className='z-30 w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
 
         <motion.div 
           className={clsx("lg:flex-1 lg:grow-[2] w-full m-auto", {
@@ -43,8 +43,14 @@ const Hero = () => {
           </h1>
           <p className="text-md md:max-lg:text-lg mb-8 dark:text-slate-300">{t("hero.details")}</p>
           <div className=' flex items-center gap-6'>
-            <Link href={"/#contact"} className='px-4 py-2 rounded-sm bg-[#00CC00] shadow-[0_2px_10px_1px_#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'> {t("hero.hireBtn")}</Link>
-            <Link href={"/#projects"} className='px-4 py-2 rounded-sm border-2 border-[#00CC00] hover:shadow-[0_5px_20px_1px_#00CC00] transition-all'>{t("hero.workBtn")}</Link>
+            <Link 
+              href={"/#contact"} 
+              className='px-4 py-2 rounded-sm bg-[#00CC00] shadow-[0_1px_10px_1px_#00CC00] hover:shadow-[0_2px_20px_1px_#00CC00] transition-all'
+            > {t("hero.hireBtn")}</Link>
+            <Link 
+              href={"/#projects"} 
+              className='px-4 py-2 rounded-sm border-2 border-[#00CC00] hover:shadow-[0_1px_20px_1px_#00CC00] transition-all'
+            >{t("hero.workBtn")}</Link>
           </div>
         </motion.div>
 
