@@ -18,11 +18,15 @@ export default async function Home({params : {locale}} : {params : any}) {
       link : "/#home"
     },
     { name : t("navbar.about"),
-      link : "/#about-us"
+      link : "/#about"
     },
     { name : t("navbar.projects"),
-      link : "/#my-work"
+      link : "/#projects"
     },
+    {
+      name : t("navbar.contact"),
+      link : "/#contact"
+    }
   ]
   return (
     <TranslationsProvider
@@ -31,7 +35,7 @@ export default async function Home({params : {locale}} : {params : any}) {
       resouces={resources}>
       <main className="">
         <Navbar/>
-        <FloatingNav className="md:hidden" navItems={navItems} contactUsItem={t("navbar.contact")}/>
+        <FloatingNav className="md:hidden" navItems={navItems}/>
         <Hero/>
         <About/>
         <Projects/>
