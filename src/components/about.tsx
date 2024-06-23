@@ -18,6 +18,7 @@ const About = (props: Props) => {
   return (
     <section id='about' className='flex flex-col items-center mt-10 p-10 lg:p-20 relative w-full bg-hero bg-[#191A19] mb-10'>
       <GradiantGridBackground/>
+      
       <motion.div
         initial={{ scale : 0.8, opacity: 0 }}
         whileInView={{ scale : 1, opacity : 1}}
