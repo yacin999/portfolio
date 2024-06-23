@@ -8,6 +8,7 @@ import {
   useMotionValue,
   useSpring,
 } from "framer-motion";
+import useResponsive from "@/hooks/useResponsive";
 
 export const AnimatedTooltip = ({
   items,
@@ -20,6 +21,7 @@ export const AnimatedTooltip = ({
 }) => {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
+  const screenSize = useResponsive()
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
   const rotate = useSpring(
@@ -36,11 +38,21 @@ export const AnimatedTooltip = ({
     x.set(event.nativeEvent.offsetX - halfWidth); // set the x value, which is then used in transform and rotate
   };
 
+  const screenSizeVariants : any = {
+    xs: 60,
+    sm: 60,
+    md: 300,
+    lg: 300,
+    xl: 300
+  };
+
+
+  console.log("test animated tooltip :", screenSizeVariants[`${screenSize}`])
   return (
     <div 
-      className="flex items-center justify-center gap-2 mt-20 flex-wrap overflow-hidden hover:overflow-visible"
+      className="flex items-center justify-center gap-2 mt-20 flex-wrap"
     >
-      {items.map((item, idx) => (
+      {items.map(item => (
         <div
           className="z-30 relative group"
           key={item.name}
@@ -84,10 +96,10 @@ export const AnimatedTooltip = ({
           <motion.div 
             initial={{
               opacity: 0, 
-              x : 300,
+              x : screenSizeVariants[`${screenSize}`],
               scale: 0.6 
             }}
-             animate={{
+             whileInView={{
               opacity: 1, 
               x : 0,
               scale: 1 

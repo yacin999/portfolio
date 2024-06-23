@@ -98,8 +98,8 @@ const Projects = () => {
                   <p className='text-sm text-slate-300'>{card.description}</p>
                 </CardContent>
                 <CardFooter className='mt-auto flex gap-1 flex-wrap'>
-                  {projects[idx].tools.map(tool=>(
-                    <Badge variant={"secondary"}>{tool}</Badge>
+                  {projects[idx].tools.map((tool, idx)=>(
+                    <Badge variant={"secondary"} key={idx}>{tool}</Badge>
                   ))}
                 </CardFooter>
               </Card>
