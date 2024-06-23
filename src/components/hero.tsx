@@ -17,7 +17,6 @@ const Hero = () => {
   return (
     <section id='hero' className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'> 
       <GradiantGridBackground/>
-
       <div className='z-30 w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
 
         <motion.div 

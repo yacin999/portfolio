@@ -15,7 +15,7 @@ type Props = {}
 const About = (props: Props) => {
   const { t } = useTranslation()
   return (
-    <section id='about' className='flex flex-col items-center mt-10 p-20 relative w-full bg-hero bg-[#191A19] mb-10'>
+    <section id='about' className='flex flex-col items-center mt-10 p-10 lg:p-20 relative w-full bg-hero bg-[#191A19] mb-10'>
       <GradiantGridBackground/>
       <motion.div
         initial={{ scale : 0.8, opacity: 0 }}
@@ -28,7 +28,7 @@ const About = (props: Props) => {
          {t("about.title")}
         <span className="absolute inset-x-0 w-[80%] mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#00CC00] to-transparent  h-[2px]"/>
         </h1>
-        <p className='mb-5 z-30 text-sm text-slate-200 text-center w-4/5'>{t("about.description")}</p>
+        <p className='mb-5 z-30 text-sm text-slate-200 text-center w-11/12 lg:w-4/5'>{t("about.description")}</p>
       </motion.div>
       
       <motion.div 
