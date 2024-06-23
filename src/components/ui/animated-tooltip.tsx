@@ -81,7 +81,7 @@ export const AnimatedTooltip = ({
             )}
           </AnimatePresence>
 
-          <motion.div
+          <motion.div 
             initial={{
               opacity: 0, 
               x : 300,
