@@ -36,7 +36,7 @@ const Projects = () => {
           <span className="absolute inset-x-0 w-[80%] mx-auto -bottom-px bg-gradient-to-r from-transparent via-[#00CC00] to-transparent  h-[2px]"/>
         </motion.h1>
 
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full pt-10 px-10 md:px-[100px] lg:px-[130px]'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-full pt-10 px-10 md:px-[100px] lg:px-[110px]'>
           {translatedProjects.cards.map((card, idx)=>(
             <motion.div
               className='z-30'

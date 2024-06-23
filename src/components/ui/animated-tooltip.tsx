@@ -15,7 +15,6 @@ export const AnimatedTooltip = ({
   items: {
     id: number;
     name: string;
-    // designation: string;
     image: string;
   }[];
 }) => {
@@ -38,7 +37,9 @@ export const AnimatedTooltip = ({
   };
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-20 flex-wrap">
+    <div 
+      className="flex items-center justify-center gap-2 mt-20 flex-wrap overflow-hidden hover:overflow-visible"
+    >
       {items.map((item, idx) => (
         <div
           className="z-30 relative group"
@@ -73,21 +74,20 @@ export const AnimatedTooltip = ({
                 className="absolute -top-12 left-[50%] !-translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
               >
                 <div className="absolute inset-x-5 z-30 -bottom-px bg-gradient-to-r from-transparent via-[#00CC00] to-transparent h-px " />
-                {/* <div className="absolute left-10 w-[40%] z-30 -bottom-px bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px " /> */}
                 <div className="font-bold text-white text-base">
                   {item.name}
                 </div>
-                {/* <div className="text-white text-xs">{item.designation}</div> */}
               </motion.div>
             )}
           </AnimatePresence>
+
           <motion.div
             initial={{
               opacity: 0, 
               x : 300,
               scale: 0.6 
             }}
-             whileInView={{
+             animate={{
               opacity: 1, 
               x : 0,
               scale: 1 

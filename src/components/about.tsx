@@ -68,6 +68,7 @@ const About = (props: Props) => {
           </CardContent>
         </Card>
       </motion.div>
+      
       <AnimatedTooltip items={skillsIcons}/>
     </section>
   )
