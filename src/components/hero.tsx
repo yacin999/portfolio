@@ -44,11 +44,11 @@ const Hero = () => {
           <div className=' flex items-center gap-6'>
             <Link 
               href={"/#contact"} 
-              className='px-4 py-2 rounded-sm bg-[#00CC00] shadow-[0_1px_10px_1px_#00CC00] hover:shadow-[0_2px_20px_1px_#00CC00] transition-all'
+              className='px-4 py-2 rounded-sm bg-[#00CC00] shadow-[0_1px_8px_1px_#00CC00] hover:shadow-[0_2px_15px_1px_#00CC00] transition-all'
             > {t("hero.hireBtn")}</Link>
             <Link 
               href={"/#projects"} 
-              className='px-4 py-2 rounded-sm border-2 backdrop-blur-md border-[#00CC00] hover:shadow-[0_1px_20px_1px_#00CC00] transition-all'
+              className='px-4 py-2 rounded-sm border-2 backdrop-blur-md border-[#00CC00] hover:shadow-[0_1px_15px_1px_#00CC00] transition-all'
             >{t("hero.workBtn")}</Link>
           </div>
         </motion.div>

@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   motion,
   useTransform,
@@ -46,7 +46,7 @@ export const AnimatedTooltip = ({
     xl: 300
   };
 
-  console.log("test screen size again :", screenSize)
+  // console.log("test screen size again :", screenSize)
   if (screenSize !== "unknown") {
     return (
       <div 
