@@ -22,7 +22,7 @@ export const AnimatedTooltip = ({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const screenSize = useResponsive()
-  console.log("test animated tooltip updated, :", screenSize)
+  // console.log("test animated tooltip updated, :", screenSize)
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
   const rotate = useSpring(
