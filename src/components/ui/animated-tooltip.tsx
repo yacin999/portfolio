@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   motion,
   useTransform,
@@ -22,7 +22,6 @@ export const AnimatedTooltip = ({
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const springConfig = { stiffness: 100, damping: 5 };
   const screenSize = useResponsive()
-  // console.log("test animated tooltip updated, :", screenSize)
   const x = useMotionValue(0); // going to set this value on mouse move
   // rotate the tooltip
   const rotate = useSpring(
@@ -41,82 +40,88 @@ export const AnimatedTooltip = ({
 
   const screenSizeVariants : any = {
     xs: 60,
-    sm: 60,
-    md: 300,
+    sm: 50,
+    md: 100,
     lg: 300,
     xl: 300
   };
 
-  return (
-    <div 
-      className="flex items-center justify-center gap-2 mt-20 flex-wrap"
-    >
-      {items.map(item => (
-        <div
-          className="z-30 relative group"
-          key={item.name}
-          onMouseEnter={() => setHoveredIndex(item.id)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <AnimatePresence mode="popLayout">
-            {hoveredIndex === item.id && (
-              <motion.div
-                initial={{ 
-                  opacity: 0, 
-                  y: 20, 
-                  scale: 0.6 
-                }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                  scale: 1,
-                  transition: {
-                    type: "spring",
-                    stiffness: 260,
-                    damping: 10,
-                  },
-                }}
-                exit={{ opacity: 0, y: 20, scale: 0.6 }}
-                style={{
-                  translateX: `!important ${translateX}`,
-                  rotate: rotate,
-                  whiteSpace: "nowrap",
-                }}
-                className="absolute -top-12 left-[50%] !-translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
-              >
-                <div className="absolute inset-x-5 z-30 -bottom-px bg-gradient-to-r from-transparent via-[#00CC00] to-transparent h-px " />
-                <div className="font-bold text-white text-base">
-                  {item.name}
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-
-          <motion.div 
-            initial={{
-              opacity: 0, 
-              x : screenSizeVariants[`${screenSize}`],
-              scale: 0.6 
-            }}
-             whileInView={{
-              opacity: 1, 
-              x : 0,
-              scale: 1 
-            }}
-            transition={{duration : 0.4, delay : 0.3}}
-            viewport={{once : true}} 
+  console.log("test screen size again :", screenSize)
+  if (screenSize !== "unknown") {
+    return (
+      <div 
+        className="flex items-center justify-center gap-2 mt-20 flex-wrap"
+      >
+        {items.map((item, idx) => (
+          <div
+            className="z-30 relative group"
+            key={item.name}
+            onMouseEnter={() => setHoveredIndex(item.id)}
+            onMouseLeave={() => setHoveredIndex(null)}
           >
-            <Image
-              onMouseMove={handleMouseMove}
-              height={100}
-              width={100} 
-              src={item.image}
-              alt={item.name}
-              className="object-cover !m-0 !p-0 object-top rounded-full h-10 w-10 group-hover:scale-105 group-hover:z-30  relative transition duration-500 bg-slate-200"
-            />
-          </motion.div>
-        </div>
-      ))}
-    </div>
-  );
+            <AnimatePresence mode="popLayout">
+              {hoveredIndex === item.id && (
+                <motion.div
+                  initial={{ 
+                    opacity: 0, 
+                    y: 20, 
+                    scale: 0.6 
+                  }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                    scale: 1,
+                    transition: {
+                      type: "spring",
+                      stiffness: 260,
+                      damping: 10,
+                    },
+                  }}
+                  exit={{ opacity: 0, y: 20, scale: 0.6 }}
+                  style={{
+                    translateX: `!important ${translateX}`,
+                    rotate: rotate,
+                    whiteSpace: "nowrap",
+                  }}
+                  className="absolute -top-12 left-[50%] !-translate-x-1/2 flex text-xs  flex-col items-center justify-center rounded-md bg-black z-50 shadow-xl px-4 py-2"
+                >
+                  <div className="absolute inset-x-5 z-30 -bottom-px bg-gradient-to-r from-transparent via-[#00CC00] to-transparent h-px " />
+                  <div className="font-bold text-white text-base">
+                    {item.name}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+  
+            <motion.div 
+              initial={{
+                opacity: 0, 
+                x : screenSizeVariants[`${screenSize}`],
+                scale: 0.6 
+              }}
+               whileInView={{
+                opacity: 1, 
+                x : 0,
+                scale: 1 
+              }}
+              transition={{duration : 0.4, delay : 0.3  + (idx * 0.01)}}
+              viewport={{once : true}} 
+            >
+              <Image
+                onMouseMove={handleMouseMove}
+                height={100}
+                width={100} 
+                src={item.image}
+                alt={item.name}
+                className="object-cover !m-0 !p-0 object-top rounded-full h-10 w-10 group-hover:scale-105 group-hover:z-30  relative transition duration-500 bg-slate-200"
+              />
+            </motion.div>
+          </div>
+        ))}
+      </div>
+    );
+  }
+  
+  return null
+
 };
