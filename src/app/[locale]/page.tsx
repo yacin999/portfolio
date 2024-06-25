@@ -28,14 +28,6 @@ export default async function Home({params : {locale}} : {params : any}) {
       link : "/#contact"
     }
   ]
-
-  
-  const promise = new Promise(resolve=> {
-    setTimeout(resolve, 20000);
-  })
-
-
-  await promise.then(()=> console.log("server loading simulation ,,,"))
   
   return (
     <TranslationsProvider
