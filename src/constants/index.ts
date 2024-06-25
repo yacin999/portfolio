@@ -81,12 +81,12 @@ export const skillsIcons = [
   {
     id : 2,
     name: "CSS",
-    image : "/assets/skills/css.svg"
+    image : "/assets/skills/css1.svg"
   },
   {
     id : 3,
     name: "HTML",
-    image : "/assets/skills/html.svg"
+    image : "/assets/skills/html1.svg"
   },
   {
     id : 4,
@@ -96,27 +96,27 @@ export const skillsIcons = [
   {
     id : 5,
     name: "React js",
-    image : "/assets/skills/reactjs.svg"
+    image : "/assets/skills/reactjs1.svg"
   },
   {
     id : 6,
     name: "Redux",
-    image : "/assets/skills/redux.svg"
+    image : "/assets/skills/redux1.svg"
   },
   {
     id : 7,
     name: "Next js",
-    image : "/assets/skills/nextjs.svg"
+    image : "/assets/skills/nextjs3.svg"
   },
   {
     id : 8,
     name: "Tailwindcss",
-    image : "/assets/skills/tailwindcss.svg"
+    image : "/assets/skills/tailwindcss1.svg"
   },
   { 
     id : 9,
     name: "Framer Motion",
-    image : "/assets/skills/framermotion.svg"
+    image : "/assets/skills/framermotion1.svg"
   },
   {
     id : 10,
@@ -126,7 +126,7 @@ export const skillsIcons = [
   {
     id : 11,
     name: "Nodejs",
-    image : "/assets/skills/nodejs.svg"
+    image : "/assets/skills/nodejs1.svg"
   },
   {
     id : 12,
