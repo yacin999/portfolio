@@ -13,7 +13,6 @@ import { useTranslation } from 'next-i18next'
 type Props = {}
 
 const About = (props: Props) => {
-  console.log("test from about us )))))))))))))")
   const { t } = useTranslation()
   return (
     <section id='about' className='flex flex-col items-center mt-10 p-10 lg:p-20 relative w-full bg-hero bg-[#191A19] mb-10'>

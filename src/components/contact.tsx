@@ -22,7 +22,7 @@ const Contact = () => {
       <GradiantGridBackground/>
       <motion.div 
         className='relative z-30 flex-1 flex flex-col items-center'
-        initial={{ x : -50, opacity: 0 }}
+        initial={{ x : -40, opacity: 0 }}
         whileInView={{ x : 0, opacity : 1}}
         transition={{duration : 0.4, delay : 0.4}}
         viewport={{once : true}}
