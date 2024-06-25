@@ -131,7 +131,7 @@ export const skillsIcons = [
   {
     id : 12,
     name: "Python",
-    image : "/assets/skills/python.svg"
+    image : "/assets/skills/python1.svg"
   },
   {
     id : 13,
@@ -141,17 +141,17 @@ export const skillsIcons = [
   {
     id : 14,
     name: "Django Rest Framework",
-    image : "/assets/skills/djangorest.svg"
+    image : "/assets/skills/djangorestframework1.svg"
   },
   {
     id : 15,
     name: "Mysql",
-    image : "/assets/skills/mysql.svg"
+    image : "/assets/skills/mysql1.svg"
   },
   {
     id : 16,
     name: "Prisma",
-    image : "/assets/skills/prisma.svg"
+    image : "/assets/skills/prisma1.svg"
   }
 ]
 
