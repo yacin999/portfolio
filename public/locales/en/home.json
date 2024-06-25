@@ -36,7 +36,7 @@
         "sourceCodeBtn" : "sourse code"
       },
       {
-        "description": "A SaaS Website Builder for building simple applications and project Management features with a great dashboard that was built using Stripe , Nextjs , Stripe , Prisma, cockroatchDB and Tailwind",
+        "description": "A SaaS Website Builder for building simple applications with drag and drop, project Management features with a great dashboard",
         "demoBtn": "see demo",
         "sourceCodeBtn" : "sourse code"
       },
@@ -51,12 +51,12 @@
         "sourceCodeBtn" : "sourse code"
       },
       {
-        "description": "A Handyman website that provides many home repairing services, built using latest frontend technologies like Html, CSS, JS, Tailwind, Nextjs, React-form-hook, Zod and Resendjs.",
+        "description": "A Handyman website that provides many home repairing services, built using latest frontend technologies.",
         "demoBtn": "see demo",
         "sourceCodeBtn" : "sourse code"
       },
       {
-        "description": "A landing page that introduces online services which was created using Html CSS, JS, Bootstrap .",
+        "description": "A landing page that introduces online services which was created using basic tochnologies.",
         "demoBtn": "see demo",
         "sourceCodeBtn" : "sourse code"
       }

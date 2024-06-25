@@ -36,7 +36,7 @@
                 "sourceCodeBtn" : "مصدر الكود"
             },
             {
-                "description" : "أداة إنشاء مواقع SaaS لإنشاء تطبيقات بسيطة وميزات إدارة المشاريع مع لوحة تحكم رائعة تم إنشاؤها باستخدام Stripe وNextjs وStripe وPrisma وcockroatchDB وTailwind",
+                "description" : "منشئ مواقع الويب SaaS لإنشاء تطبيقات بسيطة باستخدام السحب والإفلات، وميزات إدارة المشروعات مع لوحة تحكم رائعة",
                 "demoBtn" : "عرض توضيحي",
                 "sourceCodeBtn" : "مصدر الكود"
             },
@@ -51,12 +51,12 @@
                 "sourceCodeBtn" : "مصدر الكود"
             },
             {
-                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "description" : "موقع إلكتروني للعمال الماهرين يقدم العديد من خدمات إصلاح المنازل، تم تصميمه باستخدام أحدث تقنيات الواجهة الأمامية.",
                 "demoBtn" : "عرض توضيحي",
                 "sourceCodeBtn" : "مصدر الكود"
             },
             {
-                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "description" : "صفحة هبوط تقدم خدمات الكترونية تم إنشاؤها باستخدام تقنيات أساسية.",
                 "demoBtn" : "عرض توضيحي",
                 "sourceCodeBtn" : "مصدر الكود"
             }
