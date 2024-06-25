@@ -31,7 +31,7 @@
         "title" : "المشاريع",
         "cards" : [
             {
-                "description" : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+                "description" : "تطبيق ويب لإدارة جميع أنواع موارد الجامعة مثل المواد والطلاب والفصول الدراسية، والميزة الرئيسية هي إدارة الجداول الزمنية لمزامنة المعلمين مع الفصول الدراسية والمواد التي يتم تدريسها.",
                 "demoBtn" : "عرض توضيحي",
                 "sourceCodeBtn" : "مصدر الكود"
             },

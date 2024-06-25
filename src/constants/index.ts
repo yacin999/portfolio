@@ -160,7 +160,7 @@ export const projects = [
   {
     name : 'university managment system',
     image : '/assets/projects/renovado.png',
-    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    description : 'A web application for managing all kinds of university resources like materials, students, classes, and the main feature is managing timetables to synchronize teachers with classrooms and modules.',
     tools : ["Html", "CSS", "JS", "Django", "MySQL", "Bootstrap"],
     demoLink : 'https://renovado-ruddy.vercel.app/',
     sourceCode : ''
