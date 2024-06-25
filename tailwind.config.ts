@@ -78,6 +78,14 @@ const config = {
           '100%' : {
             "stroke-dashoffset" : "100"
           }
+        },
+        travel2 : {
+          "0%" : {
+            "stroke-dashoffset": "0"
+          },
+          "100%" : {
+            "stroke-dashoffset": "-100"
+          }
         }
       },
       animation: {
