@@ -53,7 +53,7 @@ const Hero = () => {
           </div>
         </motion.div>
 
-        <div className='lg:flex-1 lg:grow-[3] h-[50%] lg:h-full lg:max-w-[60%] '>
+        <div className='hidden md:block lg:flex-1 lg:grow-[3] h-[50%] lg:h-full lg:max-w-[60%] '>
           <ComputerCanvas locale={locale}/>
         </div>
       </div>
