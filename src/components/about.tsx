@@ -2,10 +2,9 @@
 
 import Image from 'next/image'
 import React from 'react'
-import { Card, CardContent, CardHeader, CardTitle } from './ui/card'
+import { Card, CardContent, CardHeader } from './ui/card'
 import { skillsIcons } from '@/constants'
 import { AnimatedTooltip } from './ui/animated-tooltip'
-import { SkullIcon } from 'lucide-react'
 import GradiantGridBackground from './gradiant-grid-background'
 import { motion } from "framer-motion"
 import { useTranslation } from 'next-i18next'
