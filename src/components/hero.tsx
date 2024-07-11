@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react'
-// import ComputerCanvas from './computer-canvas'
+import ComputerCanvas from './computer-canvas'
 import Link from 'next/link'
 import { orbitron } from '@/app/fonts'
 import { useTranslation } from 'next-i18next'
@@ -25,9 +25,9 @@ const Hero = () => {
             "pl-10" : locale === "fr" || locale === "en", 
             "pr-10" : locale === "ar",
           })}
-          // initial={{scale : 0.8, opacity : 0}}
-          // animate={{scale : 1, opacity : 1}}
-          // transition={{duration : 0.2, ease : "linear"}}
+          initial={{scale : 0.8, opacity : 0}}
+          animate={{scale : 1, opacity : 1}}
+          transition={{duration : 0.2, ease : "linear"}}
         >
             <p className={clsx("w-full flex items-center gap-2 uppercase mb-4 dark:text-slate-200 text-sm lg:text-md tracking-widest", {
               [orbitron.className] : locale === "fr" || locale === "en",
@@ -55,9 +55,9 @@ const Hero = () => {
         </motion.div>
 
           {/* hero canvas side */}
-        {/* <div className='hidden md:block lg:flex-1 lg:grow-[3] h-[50%] lg:h-full lg:max-w-[60%] '>
+        <div className='hidden md:block lg:flex-1 lg:grow-[3] h-[50%] lg:h-full lg:max-w-[60%] '>
           <ComputerCanvas locale={locale}/>
-        </div> */}
+        </div>
       </div>
     </section>
   )
