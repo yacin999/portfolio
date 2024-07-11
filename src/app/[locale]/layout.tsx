@@ -6,6 +6,7 @@ import { dir } from "i18next";
 import clsx from "clsx";
 import { changa, inter } from "../fonts";
 import { Toaster } from "@/components/ui/toaster";
+import { Layout } from "@/components/dom/Layout"
 
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ export default function RootLayout({
             enableSystem={false}
             disableTransitionOnChange
         >
-          {children}
+          <Layout>{children}</Layout>
           <Toaster />
         </ThemeProvider>
       </body>
