@@ -110,7 +110,7 @@ const Hero = () => {
       <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
     </div>
 
-    <div className='w-full text-center md:w-3/5' ref={ref}>
+    <div className='relative w-full text-center md:w-3/5' ref={ref}>
       <View className='flex h-96 w-full flex-col items-center justify-center'>
         <Suspense fallback={null}>
           <Logo route='/blob' scale={0.6} position={[0, 0, 0]} />
@@ -120,6 +120,9 @@ const Hero = () => {
 
       <Scene
         style={{
+          position : "absolute",
+          top : 0,
+          left : 0,
           // width: '100vw',
           // height: '100vh',
           width : '100%',
