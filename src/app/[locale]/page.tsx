@@ -8,6 +8,11 @@ import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
 
+import dynamic from "next/dynamic";
+import { Suspense, useRef } from "react";
+import Scene from "@/components/canvas/Scene";
+
+
 
 const i18nNamespaces = ['home'];
 
@@ -28,7 +33,6 @@ export default async function Home({params : {locale}} : {params : any}) {
       link : "/#contact"
     }
   ]
-  
   return (
     <TranslationsProvider
       namespaces={i18nNamespaces}
