@@ -45,7 +45,7 @@ export default function RootLayout({
             disableTransitionOnChange
         >
           {children}
-          {/* <Layout>{children}</Layout> */}
+          <Layout>{children}</Layout>
           <Toaster />
         </ThemeProvider>
       </body>

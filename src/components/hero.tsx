@@ -43,7 +43,6 @@ const Hero = () => {
   const { t } = useTranslation()
   const { locale } = useParams()
 
-  const ref : any = useRef()
   return (
   //   <section id='hero' className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'> 
   //     <GradiantGridBackground/>
@@ -103,38 +102,22 @@ const Hero = () => {
 
 
   <div className='mx-auto flex w-full flex-col flex-wrap items-center md:flex-row  lg:w-4/5'>
+        {/* jumbo */}
+        <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'>
+          <p className='w-full uppercase'>Next + React Three Fiber</p>
+          <h1 className='my-4 text-5xl font-bold leading-tight'>Next 3D Starter</h1>
+          <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
+        </div>
 
-    <div className='flex w-full flex-col items-start justify-center p-12 text-center md:w-2/5 md:text-left'>
-      <p className='w-full uppercase'>Next + React Three Fiber</p>
-      <h1 className='my-4 text-5xl font-bold leading-tight'>Next 3D Starter</h1>
-      <p className='mb-8 text-2xl leading-normal'>A minimalist starter for React, React-three-fiber and Threejs.</p>
-    </div>
-
-    <div className='relative w-full text-center md:w-3/5' ref={ref}>
-      <View className='flex h-96 w-full flex-col items-center justify-center'>
-        <Suspense fallback={null}>
-          <Logo route='/blob' scale={0.6} position={[0, 0, 0]} />
-          <Common color={""}/>
-        </Suspense>
-      </View>
-
-      <Scene
-        style={{
-          // position : "absolute",
-          // top : 0,
-          // left : 0,
-          // width: '100vw',
-          // height: '100vh',
-          display : "block",
-          width : '100%',
-          height : '100%',
-          pointerEvents: 'none',
-        }}
-        eventSource={ref}
-        eventPrefix='client'
-      />
-    </div>
-  </div>
+        <div className='w-full text-center md:w-3/5'>
+          <View className='flex h-96 w-full flex-col items-center justify-center'>
+            <Suspense fallback={null}>
+              <Logo route='/blob' scale={0.6} position={[0, 0, 0]} />
+              <Common color={""}/>
+            </Suspense>
+          </View>
+        </div>
+      </div>
   )
 }
 
