@@ -60,7 +60,7 @@ export const Common = () => (
     <ambientLight />
     <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
     <pointLight position={[-10, -10, -10]}  decay={0.2} />
-    <PerspectiveCamera makeDefault fov={40} position={[10, 2, 4]} />
+    <PerspectiveCamera makeDefault fov={40} position={[0, 0, 6]} />
   </Suspense>
 )
 
@@ -74,7 +74,12 @@ const View = forwardRef(({ children, ...props }, ref) => {
       <Three>
         <ViewImpl track={localRef}>
           {children}
-          <OrbitControls />
+          <OrbitControls 
+            makeDefault
+            enableZoom={false}
+            enablePan={false}
+            rotateSpeed={0.4}
+          />
         </ViewImpl>
       </Three>
     </>
