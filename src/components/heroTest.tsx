@@ -39,7 +39,7 @@ const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mo
 
 
 
-const Hero = () => {
+const HeroTest = () => {
   const { t } = useTranslation()
   const { locale } = useParams()
 
@@ -49,7 +49,7 @@ const Hero = () => {
       
       <div className='z-30 w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
         <motion.div 
-          className={clsx("lg:flex-1 lg:grow-[2] w-full m-auto", {
+          className={clsx("md:w-2/5 w-full m-auto", {
             "pl-10" : locale === "fr" || locale === "en", 
             "pr-10" : locale === "ar",
           })}
@@ -83,15 +83,14 @@ const Hero = () => {
         </motion.div>
 
           {/* hero canvas */}
-        <div className='hidden md:block lg:flex-1 lg:grow-[3] h-[50%] lg:h-full lg:max-w-[60%]'>
-          {/* <ComputerCanvas locale={locale}/> */}
+        <div className='w-full h-full text-center md:w-3/5 flex justify-center items-center'>
           <View 
-            className='h-full sm:h-48 sm:w-full'
+            className='absolute flex h-96 w-full flex-col items-center justify-center'
             orbit
           >
             <Suspense fallback={null}>
               <Computer scale={0.6} position={[0, 0, 0]}/>
-              <Common color={"blue"}/>
+              <Common/>
             </Suspense>
           </View>
         </div>
@@ -119,4 +118,4 @@ const Hero = () => {
   // )
 }
 
-export default Hero
+export default HeroTest

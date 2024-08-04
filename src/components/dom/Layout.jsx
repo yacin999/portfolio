@@ -21,8 +21,8 @@ const Layout = ({ children }) => {
       {children}
       <Scene
         style={{
-          position: 'absolute',
-          display : "block",
+          position: 'fixed',
+          zIndex : 99,
           top: 0,
           left: 0,
           width: '100vw',
