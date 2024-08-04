@@ -85,7 +85,7 @@ const HeroTest = () => {
           {/* hero canvas */}
         <div className='w-full h-full text-center md:w-3/5 flex justify-center items-center'>
           <View 
-            className='absolute flex h-96 w-full flex-col items-center justify-center'
+            className='absolute flex h-full w-full flex-col items-center justify-center'  
           >
             <Suspense fallback={null}>
               <Computer/>

@@ -13,9 +13,9 @@ const Computer = () => {
     >
         <primitive
             object={computer.scene}
-            scale={1}
+            scale={1.1}
+            // position={[1, -2, -1]} suits perspective camera
             position={[0, 0, 0]}
-            rotation={[0, 0, 0]}
         />
     </mesh>
   )
