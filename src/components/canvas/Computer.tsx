@@ -2,12 +2,9 @@ import { useGLTF } from '@react-three/drei'
 import React from 'react'
 
 
-type Props = {
-  scale : number,
-  position : [number, number, number]
-}
 
-const Computer = ({scale, position} : Props) => {
+
+const Computer = () => {
 
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
 
@@ -16,9 +13,9 @@ const Computer = ({scale, position} : Props) => {
     >
         <primitive
             object={computer.scene}
-            scale={scale}
-            position={position}
-            rotation={[-0.0, -0.3, -0.2]}
+            scale={1}
+            position={[0, 0, 0]}
+            rotation={[0, 0, 0]}
         />
     </mesh>
   )

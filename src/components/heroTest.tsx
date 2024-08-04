@@ -86,10 +86,9 @@ const HeroTest = () => {
         <div className='w-full h-full text-center md:w-3/5 flex justify-center items-center'>
           <View 
             className='absolute flex h-96 w-full flex-col items-center justify-center'
-            orbit
           >
             <Suspense fallback={null}>
-              <Computer scale={0.6} position={[0, 0, 0]}/>
+              <Computer/>
               <Common/>
             </Suspense>
           </View>

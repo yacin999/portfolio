@@ -60,11 +60,11 @@ export const Common = () => (
     <ambientLight />
     <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
     <pointLight position={[-10, -10, -10]}  decay={0.2} />
-    <PerspectiveCamera makeDefault fov={40} position={[0, 0, 6]} />
+    <PerspectiveCamera makeDefault fov={40} position={[10, 2, 4]} />
   </Suspense>
 )
 
-const View = forwardRef(({ children, orbit, ...props }, ref) => {
+const View = forwardRef(({ children, ...props }, ref) => {
   const localRef = useRef(null)
   useImperativeHandle(ref, () => localRef.current)
 
@@ -72,9 +72,9 @@ const View = forwardRef(({ children, orbit, ...props }, ref) => {
     <>
       <div ref={localRef} {...props} />
       <Three>
-        <ViewImpl track={localRef} className='absolute z-50'>
+        <ViewImpl track={localRef}>
           {children}
-          {orbit && <OrbitControls />}
+          <OrbitControls />
         </ViewImpl>
       </Three>
     </>
