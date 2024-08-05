@@ -10,14 +10,14 @@ const Computer = () => {
 
     const computer = useGLTF('./3D/desktop_pc/scene.gltf')
 
-    const {modelPositionX, modelPositionY, modelPositionZ, rotationX, rotationY, rotationZ} = useLevaControls()
+    const {scale, modelPositionX, modelPositionY, modelPositionZ, rotationX, rotationY, rotationZ} = useLevaControls()
 
   return (
     <mesh
     >
         <primitive
             object={computer.scene}
-            scale={1.1}
+            scale={scale}
             position={[modelPositionX, modelPositionY, modelPositionZ]} 
             rotation={[rotationX, rotationY, rotationZ]}
         />

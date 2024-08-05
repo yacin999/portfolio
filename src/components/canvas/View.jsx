@@ -85,7 +85,8 @@ const View = forwardRef(({ children, ...props }, ref) => {
             enableZoom={false}
             enablePan={false}
             rotateSpeed={0.4}
-            reverseVerticalOrbit={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
           />
         </ViewImpl>
       </Three>
