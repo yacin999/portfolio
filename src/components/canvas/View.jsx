@@ -53,15 +53,30 @@
 import { forwardRef, Suspense, useImperativeHandle, useRef } from 'react'
 import { OrbitControls, PerspectiveCamera, View as ViewImpl } from '@react-three/drei'
 import { Three } from '@/helpers/components/Three'
+import { useControls } from 'leva';
 
-export const Common = () => (
-  <Suspense fallback={null}>
-    <ambientLight />
-    <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
-    <pointLight position={[-10, -10, -10]}  decay={0.2} />
-    <PerspectiveCamera makeDefault position={[15, 0, 9]} />
-  </Suspense>
-)
+export const Common = () => {
+
+  const { fov, positionX, positionY, positionZ, lookAtX, lookAtY, lookAtZ } = useControls({
+    fov: { value: 75, min: 10, max: 120 },
+    positionX: { value: 0, min: -10, max: 10 },
+    positionY: { value: 5, min: -10, max: 10 },
+    positionZ: { value: 10, min: -20, max: 20 },
+    // lookAtX: { value: 0, min: -10, max: 10 },
+    // lookAtY: { value: 0, min: -10, max: 10 },
+    // lookAtZ: { value: 0, min: -10, max: 10 },
+  });
+
+
+  return ( 
+      <Suspense fallback={null}>
+        <ambientLight />
+        <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
+        <pointLight position={[-10, -10, -10]}  decay={0.2} />
+        <PerspectiveCamera makeDefault fov={fov} position={[positionX, positionY, positionZ]} />
+      </Suspense>
+    )
+}
 
 const View = forwardRef(({ children, ...props }, ref) => {
   const localRef = useRef(null)
@@ -78,6 +93,7 @@ const View = forwardRef(({ children, ...props }, ref) => {
             enableZoom={false}
             enablePan={false}
             rotateSpeed={0.4}
+            reverseVerticalOrbit={false}
           />
         </ViewImpl>
       </Three>
