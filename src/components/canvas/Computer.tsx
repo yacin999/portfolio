@@ -13,9 +13,9 @@ const Computer = () => {
       modelPositionX : {value : 0, min : -10, max : 10},
       modelPositionY : {value : 0, min : -10, max : 10},
       modelPositionZ : {value : 0, min : -10, max : 10},
-      // rotationX : {value : 0, min : -20, max : 20},
-      // rotationY : {value : 0, min : -20, max : 20},
-      // rotationZ : {value : 0, min : -20, max : 20}
+      rotationX : {value : 0, min : -20, max : 20},
+      rotationY : {value : 0, min : -20, max : 20},
+      rotationZ : {value : 0, min : -20, max : 20}
     })
 
   return (
