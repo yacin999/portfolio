@@ -44,10 +44,10 @@ const HeroTest = () => {
   const { locale } = useParams()
 
   return (
-    <section id='hero' className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'> 
+    <section id='hero' className='relative overflow-hidden w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'> 
       <GradiantGridBackground/>
       
-      <div className='z-30 w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
+      <div className='z-30 w-full h-full flex flex-col justify-center md:flex-row md:items-center md:justify-between'>
         <motion.div 
           className={clsx("md:w-2/5 w-full m-auto", {
             "pl-10" : locale === "fr" || locale === "en", 
@@ -83,7 +83,7 @@ const HeroTest = () => {
         </motion.div>
 
           {/* hero canvas */}
-        <div className='w-full h-full text-center md:w-3/5 flex justify-center items-center'>
+        <div className='hidden w-full h-full text-center md:w-3/5 md:flex justify-center items-center'>
           <View 
             className='absolute flex h-full w-full flex-col items-center justify-center'  
           >

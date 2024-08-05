@@ -1,16 +1,12 @@
-import Navbar from "@/components/navbar";
 import TranslationsProvider from "@/providers/TranslationsProvider";
 import initTranslations from "../i18n";
+
+import Navbar from "@/components/navbar";
 import { FloatingNav } from "@/components/ui/floating-navbar";
-// import Hero from "@/components/hero";
 import About from "@/components/about";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-
-// import dynamic from "next/dynamic";
-// import { Suspense, useRef } from "react";
-// import Scene from "@/components/canvas/Scene";
 import HeroTest from "@/components/heroTest";
 
 

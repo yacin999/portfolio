@@ -1,6 +1,5 @@
 import { useGLTF } from '@react-three/drei'
 import React from 'react'
-import { useControls } from 'leva'
 import useLevaControls from '@/hooks/useLevaControls'
 
 
