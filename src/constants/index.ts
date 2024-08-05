@@ -183,10 +183,10 @@ export const projects = [
   },
   {
     name : 'Ecommerce Delivery Mobile App',
-    image : '/assets/projects/boutiqueservicesinfo.png',
-    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
+    image : '/assets/projects/ecommerce-mobile-app.png',
+    description : 'A cross platform mobile application that was dedicated to solve one of the complicated problems which is VRP (Vehicle Routing Problem) with two sides (clients and vehicle drivers).',
     tools : ["Html", "CSS", "JS", "Reactjs", "React Native", "Tomtom maps"],
-    demoLink : 'https://renovado-ruddy.vercel.app/',
+    demoLink : '',
     sourceCode : 'https://github.com/yacin999/eCommerceDeliveryApp'
   },
   {

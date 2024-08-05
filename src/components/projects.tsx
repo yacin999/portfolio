@@ -47,7 +47,7 @@ const Projects = () => {
             >
               <Card className='relative w-full h-full flex flex-col bg-zinc-900'>
                 <div className='absolute top-7 right-7 flex gap-1 ltr'>
-                  {projects[idx].sourceCode !== "" && (
+                  {projects[idx].sourceCode !== ""  && (
                       <TooltipProvider>
                         <Tooltip>
                           <TooltipTrigger>
@@ -66,22 +66,26 @@ const Projects = () => {
                       </TooltipProvider>
                     )
                   }
-                  <TooltipProvider>
-                    <Tooltip>
-                      <TooltipTrigger>
-                        <Link 
-                          href={projects[idx].demoLink}
-                          className='px-2 py-2 bg-green-950 rounded-md flex items-center gap-2 text-sm'
-                          target='_blank'
-                        >
-                          <ArrowUpRight size={15} className=' stroke-[2.75px]'/> 
-                        </Link>
-                      </TooltipTrigger>
-                      <TooltipContent sideOffset={1}>
-                        <p>Live Demo</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
+                  {
+                    projects[idx].demoLink !== "" && (
+                      <TooltipProvider>
+                        <Tooltip>
+                          <TooltipTrigger>
+                            <Link 
+                              href={projects[idx].demoLink}
+                              className='px-2 py-2 bg-green-950 rounded-md flex items-center gap-2 text-sm'
+                              target='_blank'
+                            >
+                              <ArrowUpRight size={15} className=' stroke-[2.75px]'/> 
+                            </Link>
+                          </TooltipTrigger>
+                          <TooltipContent sideOffset={1}>
+                            <p>Live Demo</p>
+                          </TooltipContent>
+                        </Tooltip>
+                      </TooltipProvider>
+                    )
+                  }
                 </div>
                 <CardHeader>
                   <Image  
@@ -89,7 +93,7 @@ const Projects = () => {
                     width={400}
                     height={300}
                     alt={projects[idx].name}
-                    className='w-auto rounded-sm'
+                    className='w-auto rounded-sm max-h-[205px]'
                   />
                 </CardHeader>
                 <CardContent>
