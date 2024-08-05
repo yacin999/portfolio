@@ -53,19 +53,11 @@
 import { forwardRef, Suspense, useImperativeHandle, useRef } from 'react'
 import { OrbitControls, PerspectiveCamera, View as ViewImpl } from '@react-three/drei'
 import { Three } from '@/helpers/components/Three'
-import { useControls } from 'leva';
+import useLevaControls from '@/hooks/useLevaControls'
 
 export const Common = () => {
 
-  const { fov, cameraPositionX, cameraPositionY, cameraPositionZ } = useControls({
-    fov: { value: 75, min: 10, max: 120 },
-    cameraPositionX: { value: 0, min: -10, max: 10 },
-    cameraPositionY: { value: 5, min: -10, max: 10 },
-    cameraPositionZ: { value: 10, min: -20, max: 20 },
-    // lookAtX: { value: 0, min: -10, max: 10 },
-    // lookAtY: { value: 0, min: -10, max: 10 },
-    // lookAtZ: { value: 0, min: -10, max: 10 },
-  });
+  const { fov, cameraPositionX, cameraPositionY, cameraPositionZ } = useLevaControls();
 
 
   return ( 
