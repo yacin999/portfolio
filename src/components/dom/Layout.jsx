@@ -2,7 +2,6 @@
 
 import { useRef } from 'react'
 import dynamic from 'next/dynamic'
-import { Leva } from 'leva'
 const Scene = dynamic(() => import('@/components/canvas/Scene'), { ssr: false })
 
 const Layout = ({ children }) => {
@@ -20,9 +19,6 @@ const Layout = ({ children }) => {
       }}
     >
       {children}
-      {/* configure leva settings */}
-      <Leva hidden/>
-      
       <Scene
         style={{
           position: 'fixed',
