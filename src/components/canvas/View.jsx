@@ -57,11 +57,11 @@ import { useControls } from 'leva';
 
 export const Common = () => {
 
-  const { fov, positionX, positionY, positionZ, lookAtX, lookAtY, lookAtZ } = useControls({
+  const { fov, cameraPositionX, cameraPositionY, cameraPositionZ } = useControls({
     fov: { value: 75, min: 10, max: 120 },
-    positionX: { value: 0, min: -10, max: 10 },
-    positionY: { value: 5, min: -10, max: 10 },
-    positionZ: { value: 10, min: -20, max: 20 },
+    cameraPositionX: { value: 0, min: -10, max: 10 },
+    cameraPositionY: { value: 5, min: -10, max: 10 },
+    cameraPositionZ: { value: 10, min: -20, max: 20 },
     // lookAtX: { value: 0, min: -10, max: 10 },
     // lookAtY: { value: 0, min: -10, max: 10 },
     // lookAtZ: { value: 0, min: -10, max: 10 },
@@ -73,7 +73,7 @@ export const Common = () => {
         <ambientLight />
         <pointLight position={[20, 30, 10]} intensity={3} decay={0.2} />
         <pointLight position={[-10, -10, -10]}  decay={0.2} />
-        <PerspectiveCamera makeDefault fov={fov} position={[positionX, positionY, positionZ]} />
+        <PerspectiveCamera makeDefault fov={fov} position={[cameraPositionX, cameraPositionY, cameraPositionZ]} />
       </Suspense>
     )
 }
