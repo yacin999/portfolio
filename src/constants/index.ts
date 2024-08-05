@@ -161,7 +161,7 @@ export const projects = [
     name : 'Space Portfolio',
     image : '/assets/projects/spaceportfolio.png',
     description : 'A portfolio website that implements the latest frontend technologies with some 3D space models.',
-    tools : ["Html", "CSS", "JS", "React", "Nextjs", "Three js", "Framer Motion"],
+    tools : ["Html", "CSS", "JS", "React", "Tailwind Css", "Nextjs", "Three js", "Framer Motion"],
     demoLink : 'https://spaceportfolio-gamma.vercel.app/',
     sourceCode : ''
   },
@@ -178,7 +178,7 @@ export const projects = [
     image : '/assets/projects/apple-website-clone.png',
     description : 'A 3D website that showcases the latest web designs which was inspired from the original apple website working with the latest frontend technologies.',
     demoLink : 'https://apple-website-clone-tau-six.vercel.app/',
-    tools : ["Html", "CSS", "JS", "Reactjs", "Next js", "Three js", "Gsap"],
+    tools : ["Html", "CSS", "JS", "Tailwind Css", "Reactjs", "Next js", "Three js", "Gsap"],
     sourceCode : ''
   },
   {

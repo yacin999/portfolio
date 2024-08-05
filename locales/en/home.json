@@ -31,7 +31,7 @@
     "title": "projects",
     "cards": [
       {
-        "description": "A web application for managing all kinds of university resources like materials, students, classes, and the main feature is managing timetables to synchronize teachers with classrooms and modules.",
+        "description": "A portfolio website that implements the latest frontend technologies with some 3D space models.",
         "demoBtn": "see demo",
         "sourceCodeBtn": "sourse code"
       },
@@ -41,12 +41,12 @@
         "sourceCodeBtn": "sourse code"
       },
       {
-        "description": "'A 3D website that showcases the latest web designs which was inspired from the original apple website working with the latest frontend technologies.",
+        "description": "A 3D website that showcases the latest web designs which was inspired from the original apple website.",
         "demoBtn": "see demo",
         "sourceCodeBtn": "sourse code"
       },
       {
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.",
+        "description": "A cross platform mobile application that was dedicated to solve one of the complicated problems which is VRP (Vehicle Routing Problem) with two sides (clients and vehicle drivers).",
         "demoBtn": "see demo",
         "sourceCodeBtn": "sourse code"
       },
