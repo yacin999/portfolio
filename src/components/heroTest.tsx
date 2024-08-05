@@ -1,7 +1,6 @@
 "use client"
 
-import React, { LegacyRef, Suspense, useRef } from 'react'
-import ComputerCanvas from './computer-canvas'
+import React, { Suspense } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { useTranslation } from 'next-i18next'
@@ -21,7 +20,6 @@ const View : any = dynamic(() => import('@/components/canvas/View').then((mod) =
 const Computer = dynamic(()=> import("@/components/canvas/Computer"), {
   ssr : false
 })
-const Logo = dynamic(()=> import("@/components/canvas/Examples").then((mod)=> mod.Logo), { ssr : false})
 const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
 
