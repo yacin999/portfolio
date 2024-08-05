@@ -158,11 +158,11 @@ export const skillsIcons = [
 
 export const projects = [
   {
-    name : 'university managment system',
-    image : '/assets/projects/renovado.png',
-    description : 'A web application for managing all kinds of university resources like materials, students, classes, and the main feature is managing timetables to synchronize teachers with classrooms and modules.',
-    tools : ["Html", "CSS", "JS", "Django", "MySQL", "Bootstrap"],
-    demoLink : 'https://renovado-ruddy.vercel.app/',
+    name : 'Space Portfolio',
+    image : '/assets/projects/spaceportfolio.png',
+    description : 'A portfolio website that implements the latest frontend technologies with some 3D space models.',
+    tools : ["Html", "CSS", "JS", "React", "Nextjs", "Three js", "Framer Motion"],
+    demoLink : 'https://spaceportfolio-gamma.vercel.app/',
     sourceCode : ''
   },
   {
@@ -174,11 +174,11 @@ export const projects = [
     sourceCode : ''
   },
   {
-    name : 'vehicle routing problem API',
-    image : '/assets/projects/renovado.png',
-    description : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit aut amet est possimus earum officia vero.',
-    demoLink : 'https://renovado-ruddy.vercel.app/',
-    tools : ["Html", "CSS", "JS", "Reactjs", "Django", "Django Rest Framework", "MySQL"],
+    name : 'Apple website clone',
+    image : '/assets/projects/apple-website-clone.png',
+    description : 'A 3D website that showcases the latest web designs which was inspired from the original apple website working with the latest frontend technologies.',
+    demoLink : 'https://apple-website-clone-tau-six.vercel.app/',
+    tools : ["Html", "CSS", "JS", "Reactjs", "Next js", "Three js", "Gsap"],
     sourceCode : ''
   },
   {

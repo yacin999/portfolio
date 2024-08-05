@@ -7,7 +7,7 @@ import About from "@/components/about";
 import Projects from "@/components/projects";
 import Contact from "@/components/contact";
 import Footer from "@/components/footer";
-import HeroTest from "@/components/heroTest";
+import Hero from "@/components/hero";
 
 
 
@@ -38,8 +38,7 @@ export default async function Home({params : {locale}} : {params : any}) {
       <main className="">
         <Navbar/>
         <FloatingNav className="md:hidden" navItems={navItems}/>
-        {/* <Hero/> */}
-        <HeroTest/>
+        <Hero/>
         <About/>
         <Projects/>
         <Contact/>

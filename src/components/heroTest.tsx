@@ -1,6 +1,7 @@
 "use client"
 
-import React, { Suspense } from 'react'
+import React, { LegacyRef, Suspense, useRef } from 'react'
+import ComputerCanvas from './computer-canvas'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import { useTranslation } from 'next-i18next'
@@ -10,16 +11,28 @@ import clsx from 'clsx'
 
 import { orbitron } from '@/app/fonts'
 import GradiantGridBackground from './gradiant-grid-background'
-import CanvasLoader from './canvas-loader'
+import Scene from './canvas/Scene'
 
 
 const View : any = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
-  loading: () => <CanvasLoader/>
+  loading: () => (
+    <div className='flex h-96 w-full flex-col items-center justify-center'>
+      <svg className='-ml-1 mr-3 h-5 w-5 animate-spin text-black' fill='none' viewBox='0 0 24 24'>
+        <circle className='opacity-25' cx='12' cy='12' r='10' stroke='currentColor' strokeWidth='4' />
+        <path
+          className='opacity-75'
+          fill='currentColor'
+          d='M4 12a8 8 0 0 1 8-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 0 1 4 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z'
+        />
+      </svg>
+    </div>
+  ),
 })
 const Computer = dynamic(()=> import("@/components/canvas/Computer"), {
   ssr : false
 })
+const Logo = dynamic(()=> import("@/components/canvas/Examples").then((mod)=> mod.Logo), { ssr : false})
 const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mod.Common), { ssr: false })
 
 
@@ -31,12 +44,12 @@ const HeroTest = () => {
   const { locale } = useParams()
 
   return (
-    <section id='hero' className='relative overflow-hidden w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'> 
+    <section id='hero' className='relative w-full h-[calc(100vh-70px)] bg-hero  bg-cover flex items-center mt-[70px]'> 
       <GradiantGridBackground/>
       
-      <div className='z-30 w-full h-full flex flex-col justify-center md:flex-row md:items-center md:justify-between'>
+      <div className='z-30 w-full h-full flex flex-col justify-center lg:flex-row lg:items-center lg:justify-between'>
         <motion.div 
-          className={clsx("md:w-2/5 w-full m-auto", {
+          className={clsx("lg:flex-1 lg:grow-[2] w-full m-auto", {
             "pl-10" : locale === "fr" || locale === "en", 
             "pr-10" : locale === "ar",
           })}
@@ -70,13 +83,15 @@ const HeroTest = () => {
         </motion.div>
 
           {/* hero canvas */}
-        <div className='hidden w-full h-full text-center md:w-3/5 md:flex justify-center items-center'>
+        <div className='hidden md:block lg:flex-1 lg:grow-[3] h-[50%] lg:h-full lg:max-w-[60%]'>
+          {/* <ComputerCanvas locale={locale}/> */}
           <View 
-            className='absolute flex h-full w-full flex-col items-center justify-center'  
+            className='h-full sm:h-48 sm:w-full'
+            orbit
           >
             <Suspense fallback={null}>
-              <Computer/>
-              <Common/>
+              <Computer scale={0.6} position={[0, 0, 0]}/>
+              <Common color={"blue"}/>
             </Suspense>
           </View>
         </div>
@@ -105,3 +120,4 @@ const HeroTest = () => {
 }
 
 export default HeroTest
+
