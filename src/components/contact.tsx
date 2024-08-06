@@ -35,7 +35,12 @@ const Contact = () => {
           <div className='flex gap-5'>
             {socialMedia.map(icon=> {
               const Component = iconsComponents[icon.component]
-              return <Link key={icon.name} href={icon.link}>
+              return <Link 
+                key={icon.name} 
+                href={icon.link}
+                target='_blank'
+                aria-label={`${icon.name} social media link`}
+                >
                 <Component size={30} className="fill-[#00CC00]"/>
               </Link>
             })}

@@ -19,7 +19,12 @@ const Footer = () => {
         <div className='flex gap-8'>
             {socialMedia.map(icon=> {
                 const Component = iconsComponents[icon.component]
-                return <Link key={icon.name} href={icon.link}>
+                return <Link 
+                  key={icon.name} 
+                  href={icon.link}
+                  target='_blank'
+                  aria-label={`${icon.name} social media link`}
+                >
                     <Component size={20} className="fill-slate-300"/>
                 </Link>
             })}
