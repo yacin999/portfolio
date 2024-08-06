@@ -55,8 +55,10 @@ const Projects = () => {
                               href={projects[idx].sourceCode}
                               className='px-2 py-2 bg-[#7F1D1D] rounded-md flex items-center gap-2 text-sm'
                               target='_blank'
+                              aria-label={`source code for ${projects[idx].name}`}
                             >
                               <Github size={15} className='fill-white'/>
+                              <span className='sr-only'>source code</span>
                             </Link>
                           </TooltipTrigger>
                           <TooltipContent sideOffset={1}>
@@ -75,9 +77,10 @@ const Projects = () => {
                               href={projects[idx].demoLink}
                               className='px-2 py-2 bg-green-950 rounded-md flex items-center gap-2 text-sm'
                               target='_blank'
+                              aria-label={`Demo link for ${projects[idx].name}`}
                             >
                               <ArrowUpRight size={15} className=' stroke-[2.75px]'/> 
-                              <span className='sr-only'>demo</span>
+                              <span className='sr-only'>demo link</span>
                             </Link>
                           </TooltipTrigger>
                           <TooltipContent sideOffset={1}>
