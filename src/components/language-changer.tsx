@@ -7,7 +7,6 @@ import i18nConfig from '../../i18nConfig'
 
 
 const LanguageChanger = () => {
-    // const [languageState, setLanguageState] = useState("en")
     const { t, i18n } = useTranslation();
     const currentLocale = i18n.language;
     const router = useRouter();
@@ -15,7 +14,6 @@ const LanguageChanger = () => {
 
     const handleChange = (value : string) => {
         const newLocale = value
-        // setLanguageState(newLocale)
 
         // set cookie for next-i18n-router
         const days = 30;
@@ -41,7 +39,12 @@ const LanguageChanger = () => {
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
-        <div className='relative cursor-pointer dark:hover:text-slate-300'>
+        <div 
+            className='relative cursor-pointer dark:hover:text-slate-300'
+            role="button"
+            aria-haspopup="true"
+            aria-expanded="false"
+        >
             <Languages size={18}/>
             <ChevronDown className='absolute top-0 -right-4' size={15}/>
         </div>

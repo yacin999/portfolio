@@ -77,6 +77,7 @@ const Projects = () => {
                               target='_blank'
                             >
                               <ArrowUpRight size={15} className=' stroke-[2.75px]'/> 
+                              <span className='sr-only'>demo</span>
                             </Link>
                           </TooltipTrigger>
                           <TooltipContent sideOffset={1}>
