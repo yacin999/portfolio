@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuLabel, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuSeparator, DropdownMenuTrigger } from './ui/dropdown-menu'
+import React from 'react'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuRadioGroup, DropdownMenuRadioItem, DropdownMenuTrigger } from './ui/dropdown-menu'
 import { ChevronDown, Languages } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { usePathname, useRouter } from 'next/navigation'
@@ -44,6 +44,7 @@ const LanguageChanger = () => {
             role="button"
             aria-haspopup="true"
             aria-expanded="false"
+            aria-label="Select language"
         >
             <Languages size={18}/>
             <ChevronDown className='absolute top-0 -right-4' size={15}/>
