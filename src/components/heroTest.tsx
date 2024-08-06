@@ -89,10 +89,10 @@ const HeroTest = () => {
             className='h-full sm:h-48 sm:w-full'
             orbit
           >
-            <Suspense fallback={null}>
+            {/* <Suspense fallback={null}>
               <Computer scale={0.6} position={[0, 0, 0]}/>
               <Common color={"blue"}/>
-            </Suspense>
+            </Suspense> */}
           </View>
         </div>
       </div>
